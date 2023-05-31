@@ -78,6 +78,9 @@ def print_menu():
 2 - Clima
 3 - Ver Posts
 4 - Criar um Post
+5 - Remover um Post
+6 - FAQ
+7 - Sugestões de Melhoria
 --------------------------
     """
     print(_(menu))
@@ -92,7 +95,7 @@ if __name__ == "__main__":
         print(_(f"Bem vindo(a) {user['nome']}"))
         while True:
             print_menu()
-            opcao = input("Digite a opção desejada: ")
+            opcao = input(_("Digite a opção desejada: "))
             print()
             if config["clear_output"]:
                 os.system("cls" if os.name == "nt" else "clear")
@@ -113,5 +116,11 @@ if __name__ == "__main__":
                     show_post()
                 case 4:
                     create_post(user)
+                case 5:
+                    remove_post(user)
+                case 6:
+                    faq()
+                case 7:
+                    suggestions()
                 case _:
                     print(_("Opção inexistente"))
