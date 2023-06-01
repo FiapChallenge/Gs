@@ -1,0 +1,35 @@
+{
+    "augustobb@live.com": {
+        "Cebola": [
+            {
+                "Data": "01/06/2023",
+                "Clima": "Ensolaro",
+                "Atividade Di\u00e1ria": "Capinei o lote e reguei as plantas",
+                "Estado da Lavoura": "Saud\u00e1vel",
+                "Custos": "200",
+                "Vendas": "500",
+                "Observa\u00e7\u00f5es": "Nenhuma em especial"
+            }
+        ],
+        "Batata": [
+            {
+                "Data": "01/06/2023",
+                "Clima": "Ensolarado",
+                "Atividade Di\u00e1ria": "Dormi na rede",
+                "Estado da Lavoura": "Doente",
+                "Custos": "0",
+                "Vendas": "0",
+                "Observa\u00e7\u00f5es": "Nenhuma"
+            },
+            {
+                "Data": "31/05/2023",
+                "Clima": "Nublado",
+                "Atividade Di\u00e1ria": "Adubei as plantas",
+                "Estado da Lavoura": "Um pouco doente",
+                "Custos": "100",
+                "Vendas": "300",
+                "Observa\u00e7\u00f5es": "Dia produtivo"
+            }
+        ]
+    }
+}

@@ -2,13 +2,12 @@ import json
 import re
 import os
 from utils.commands import *
-from utils.commands import _
-
 
 users = json.load(open("data/users.json", "r"))
 
+
 def cadastro():
-    print(_("Bem vindo(a) ao AgroSolution"))
+    print(trad("Bem vindo(a) ao AgroSolution"))
     opcao = input("Você já possui cadastro? (s/n): ")
     if opcao == "s":
         user = login()
@@ -19,33 +18,34 @@ def cadastro():
         while not cadastrado:
             nome = input("Digite seu nome: ").strip().capitalize()
             if len(nome) < 5:
-                print(_("Nome muito curto"))
+                print(trad("Nome muito curto"))
                 continue
             email = input("Digite seu email: ")
             # check if email is valid
             if not re.match(r"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+", email):
-                print(_("Email inválido"))
+                print(trad("Email inválido"))
                 continue
             if email in users:
-                print(_("Email já cadastrado"))
+                print(trad("Email já cadastrado"))
                 continue
             senha = input("Digite sua senha: ")
             if " " in senha:
-                print(_("Senha não pode conter espaços"))
+                print(trad("Senha não pode conter espaços"))
                 continue
             if len(senha) < 5:
-                print(_("Senha muito curta"))
+                print(trad("Senha muito curta"))
                 continue
             users[email] = {"nome": nome, "email": email, "senha": senha}
             json.dump(users, open("users.json", "w"), indent=4)
-            print(_("Cadastro realizado com sucesso"))
+            print(trad("Cadastro realizado com sucesso"))
+            save_data()
             cadastrado = True
             return users[email]
         else:
-            print(_("Opção inválida"))
+            print(trad("Opção inválida"))
             cadastro()
     else:
-        print(_("Opção inválida"))
+        print(trad("Opção inválida"))
         cadastro()
 
 
@@ -56,17 +56,17 @@ def login():
         senha = input("Digite sua senha: ")
         if email in users:
             if senha == users[email]["senha"]:
-                print(_("Login realizado com sucesso"))
+                print(trad("Login realizado com sucesso"))
                 return users[email]
             else:
-                print(_("Senha incorreta"))
+                print(trad("Senha incorreta"))
         else:
-            print(_("Email não cadastrado"))
+            print(trad("Email não cadastrado"))
 
 
 def save_data():
-    json.dump(users, open("data/users.json", "w", encoding='utf8'), indent=4)
-    json.dump(config, open("data/settings.json", "w", encoding='utf8'), indent=4)
+    json.dump(users, open("data/users.json", "w", encoding="utf8"), indent=4)
+    json.dump(config, open("data/settings.json", "w", encoding="utf8"), indent=4)
 
 
 def print_menu():
@@ -76,14 +76,15 @@ def print_menu():
 0 - Sair
 1 - Configurações
 2 - Clima
-3 - Ver Posts
-4 - Criar um Post
-5 - Remover um Post
-6 - FAQ
-7 - Sugestões de Melhoria
+3 - Diário Agrícola
+4 - Ver Posts
+5 - Criar um Post
+6 - Remover um Post
+7 - FAQ
+8 - Sugestões de Melhoria
 --------------------------
     """
-    print(_(menu))
+    print(trad(menu))
 
 
 if __name__ == "__main__":
@@ -92,17 +93,17 @@ if __name__ == "__main__":
     else:
         user = cadastro()
     if user is not None:
-        print(_(f"Bem vindo(a) {user['nome']}"))
+        print(trad(f"Bem vindo(a) {user['nome']}"))
         while True:
             print_menu()
-            opcao = input(_("Digite a opção desejada: "))
+            opcao = input(trad("Digite a opção desejada: "))
             print()
             if config["clear_output"]:
                 os.system("cls" if os.name == "nt" else "clear")
             try:
                 opcao = int(opcao)
             except:
-                print(_("Digite um número"))
+                print(trad("Digite um número"))
                 continue
             match opcao:
                 case 0:
@@ -113,14 +114,16 @@ if __name__ == "__main__":
                 case 2:
                     weather()
                 case 3:
-                    show_post()
+                    diary(user)
                 case 4:
-                    create_post(user)
+                    show_post()
                 case 5:
-                    remove_post(user)
+                    create_post(user)
                 case 6:
-                    faq()
+                    remove_post(user)
                 case 7:
+                    faq()
+                case 8:
                     suggestions()
                 case _:
-                    print(_("Opção inexistente"))
+                    print(trad("Opção inexistente"))
