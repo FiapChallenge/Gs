@@ -3,9 +3,11 @@ import re
 import os
 from utils.commands import *
 
+# Carrega os usuários do arquivo users.json
 users = json.load(open("data/users.json", "r"))
 
 
+# Função para realizar o cadastro
 def cadastro():
     print(trad("Bem vindo(a) ao AgroSolution"))
     opcao = input("Você já possui cadastro? (s/n): ")
@@ -21,7 +23,7 @@ def cadastro():
                 print(trad("Nome muito curto"))
                 continue
             email = input("Digite seu email: ")
-            # check if email is valid
+            # Checa se o email é válido
             if not re.match(r"[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+", email):
                 print(trad("Email inválido"))
                 continue
@@ -49,6 +51,7 @@ def cadastro():
         cadastro()
 
 
+# Função para realizar o login
 def login():
     logged = False
     while not logged:
@@ -64,6 +67,7 @@ def login():
             print(trad("Email não cadastrado"))
 
 
+# Função para salvar os dados nos respectivos arquivos.json
 def save_data():
     json.dump(users, open("data/users.json", "w", encoding="utf8"), indent=4)
     json.dump(config, open("data/settings.json", "w", encoding="utf8"), indent=4)
@@ -87,12 +91,14 @@ def print_menu():
     print(trad(menu))
 
 
+# Executa o programa, caso o usuário não esteja cadastrado, ele é redirecionado para a função cadastro()
 if __name__ == "__main__":
     if config["debug"]:
         user = users["augustobb@live.com"]
     else:
         user = cadastro()
     if user is not None:
+        # Imprime uma mensagem de boas vindas e mostra o menu
         print(trad(f"Bem vindo(a) {user['nome']}"))
         while True:
             print_menu()

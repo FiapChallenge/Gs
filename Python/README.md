@@ -12,7 +12,7 @@
 <details open>
   <summary><h3><strong>Índice</strong></h3></summary>
   <ol>
-    <li><a href="#sobre">Sobre o Checkpoint</a></li>
+    <li><a href="#sobre">Sobre o GS de Python</a></li>
     <li><a href="#Objetivo">Objetivo</a></li>
     <li><a href="#requisitos">Requisitos</a></li>
     <li><a href="#dependencias">Dependências</a></li>
@@ -24,12 +24,13 @@
 
 <br>
 
-<h2 name="sobre">📖 Sobre o Checkpoint</h2>
+<h2 name="sobre">📖 Sobre o GS de Python</h2>
 
 |**Global Solution**| Python                                |
 | ----------------  | ------------------------------------- |
 | **Curso**         | Análise e Desenvolvimento de Sistemas |
 | **Disciplina**    | Computational Thinking Using Python   |
+| **Vídeo Intro**   | http://youtu.be/p385kZR-jL8           |
 | **Professor**     | Albérico de Castro Barros Filho       |
 | **Turma**         | 1TDSS                                 |
 | **More Info**     | [Pdf da GS](GFX/gs.pdf)               |
@@ -82,6 +83,7 @@ Email: queiroz@fiap.com.br     | Senha: SouzaS<br>
 -   [x] Suporta +100 línguas (Tradução automática)
 -   [x] Pegar sugestões dos usúarios
 -   [x] Sistema de cadastro e login
+-   [x] Diário Agrícola
 -   [ ] Tradução dos Posts
 -   [ ] Fazer previsões do tempo
 -   [ ] Mercado dos produtos agrícolas
@@ -89,6 +91,16 @@ Email: queiroz@fiap.com.br     | Senha: SouzaS<br>
 
 <br>
 <h2 name="autores">✍️ Integrantes</h2>
+<br>
+
+| **Integrantes**                  | **RM** |
+| -------------------------------- | ------ |
+| Augusto Barcelos Barros          | 98078  |
+| Gabriel Gribl de Carvalho        | 96270  |
+| Gabriel Souza de Queiroz         | 98570  |
+| Gabriela Zanotto Alves Rodrigues | 551629 |
+
+<br>
 <table>
   <tr>
     <td align="center">

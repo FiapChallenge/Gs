@@ -4,7 +4,7 @@ import requests
 from utils.APIkeys import WEATHER_API_KEY
 from translate import Translator
 
-
+# Carrega as configurações do arquivo settings.json
 try:
     with open("data/settings.json", "r", encoding="utf-8") as f:
         config = json.load(f)
@@ -12,6 +12,125 @@ except FileNotFoundError:
     config = {"clear_output": False}
 
 
+# Checa se o language code é válido
+def is_language_supported(lang_code):
+    lang = [
+        "pt-br",
+        "af",
+        "sq",
+        "am",
+        "ar",
+        "hy",
+        "az",
+        "eu",
+        "be",
+        "bn",
+        "bs",
+        "bg",
+        "ca",
+        "ceb",
+        "ny",
+        "zh-cn",
+        "zh-tw",
+        "co",
+        "hr",
+        "cs",
+        "da",
+        "nl",
+        "en",
+        "eo",
+        "et",
+        "tl",
+        "fi",
+        "fr",
+        "fy",
+        "gl",
+        "ka",
+        "de",
+        "el",
+        "gu",
+        "ht",
+        "ha",
+        "haw",
+        "iw",
+        "he",
+        "hi",
+        "hmn",
+        "hu",
+        "is",
+        "ig",
+        "id",
+        "ga",
+        "it",
+        "ja",
+        "jw",
+        "kn",
+        "kk",
+        "km",
+        "ko",
+        "ku",
+        "ky",
+        "lo",
+        "la",
+        "lv",
+        "lt",
+        "lb",
+        "mk",
+        "mg",
+        "ms",
+        "ml",
+        "mt",
+        "mi",
+        "mr",
+        "mn",
+        "my",
+        "ne",
+        "no",
+        "or",
+        "ps",
+        "fa",
+        "pl",
+        "pt",
+        "pa",
+        "ro",
+        "ru",
+        "sm",
+        "gd",
+        "sr",
+        "st",
+        "sn",
+        "sd",
+        "si",
+        "sk",
+        "sl",
+        "so",
+        "es",
+        "su",
+        "sw",
+        "sv",
+        "tg",
+        "ta",
+        "te",
+        "th",
+        "tr",
+        "uk",
+        "ur",
+        "ug",
+        "uz",
+        "vi",
+        "cy",
+        "xh",
+        "yi",
+        "yo",
+        "zu",
+    ]
+    if lang_code in lang:
+        return True
+    else:
+        return False
+
+
+# Função para traduzir o texto para o idioma escolhido
 def trad(text):
     if config["idioma"] == "pt" or config["idioma"] == "pt-br":
         return text
@@ -20,6 +139,7 @@ def trad(text):
     return translation
 
 
+# Função para mostrar o clima
 def weather():
     print(trad("Opção escolhida: Clima"))
     cidade = input(trad("Digite o nome da cidade: "))
@@ -59,6 +179,7 @@ def weather():
         print("Erro ao obter a previsão do tempo.")
 
 
+# Função para mexer nas configurações
 def settings():
     print(trad("Opção escolhida: Configurações"))
     # TODO - Alterar Idioma da settings
@@ -89,6 +210,10 @@ def settings():
                             "Digite o idioma que deseja utilizar (ex: en -> english, fr -> french, pt -> português): "
                         )
                     )
+                    # check if language is valid
+                    if not is_language_supported(idioma):
+                        print(trad("Idioma inválido"))
+                        continue
                     config[opcao] = idioma  # type: ignore
                     print(
                         f"Configuração alterada com sucesso | Novo valor de {opcao}: ",
@@ -105,6 +230,7 @@ def settings():
             print(("Opção inválida"))
 
 
+# Função que mostra os posts
 def show_post():
     print(trad("Opção escolhida: Ver Posts"))
     with open("data/posts.json", "r", encoding="utf-8") as f:
@@ -138,6 +264,7 @@ def show_post():
     print(f"Tags: {', '.join(post['tags'])}")
 
 
+# Função para criar um post
 def create_post(user):
     print(trad("Opção escolhida: Criar um Post"))
     with open("data/posts.json", "r", encoding="utf-8") as f:
@@ -175,6 +302,43 @@ def create_post(user):
         json.dump(posts, f, indent=4)
 
 
+# Função para remover um post
+def remove_post(user):
+    print(trad("Opção escolhida: Remover um Post"))
+    with open("data/posts.json", "r", encoding="utf-8") as f:
+        posts = json.load(f)
+    print(trad("Meus Posts: "))
+    my_posts = {}
+    i = 1
+    for id, post in posts.items():
+        if post["user"] == user["email"]:
+            my_posts.update({i: id})
+            print(f"{i}) {post['titulo']}")
+            i += 1
+    if len(my_posts) == 0:
+        print(trad("Você não possui nenhum post"))
+        return
+    try:
+        post_id = int(
+            input(
+                trad("Digite o id do post que deseja remover (0 para voltar ao menu): ")
+            )
+        )
+    except:
+        print(trad("Digite um número"))
+        return
+    if post_id == "0":
+        return
+    if post_id not in my_posts.keys():
+        print(trad("Post inexistente"))
+        return
+    posts.pop(my_posts[post_id])
+    with open("data/posts.json", "w", encoding="utf-8") as f:
+        json.dump(posts, f, indent=4)
+    print(trad("Post removido com sucesso"))
+
+
+# Função para mostrar as perguntas frequentes
 def faq():
     print(trad("Opção escolhida: FAQ"))
     print(trad("Perguntas Frequentes: "))
@@ -212,6 +376,7 @@ def faq():
     print(trad(f"{question['a']}"))
 
 
+# Função para enviar sugestões de melhoria
 def suggestions():
     print(trad("Opção escolhida: Sugestões de Melhoria"))
     with open("data/suggestions.json", "r", encoding="utf-8") as f:
@@ -226,48 +391,14 @@ def suggestions():
     print(trad("Obrigado por contribuir com o nosso projeto!"))
 
 
-def remove_post(user):
-    print(trad("Opção escolhida: Remover um Post"))
-    with open("data/posts.json", "r", encoding="utf-8") as f:
-        posts = json.load(f)
-    print(trad("Meus Posts: "))
-    my_posts = {}
-    i = 1
-    for id, post in posts.items():
-        if post["user"] == user["email"]:
-            my_posts.update({i: id})
-            print(f"{i}) {post['titulo']}")
-        i += 1
-    if len(my_posts) == 0:
-        print(trad("Você não possui nenhum post"))
-        return
-    try:
-        post_id = int(
-            input(
-                trad("Digite o id do post que deseja remover (0 para voltar ao menu): ")
-            )
-        )
-    except:
-        print(trad("Digite um número"))
-        return
-    if post_id == "0":
-        return
-    if post_id not in my_posts.keys():
-        print(trad("Post inexistente"))
-        return
-    posts.pop(my_posts[post_id])
-    with open("data/posts.json", "w", encoding="utf-8") as f:
-        json.dump(posts, f, indent=4)
-    print(trad("Post removido com sucesso"))
-
-
+# Classe Lavoura com os métodos para adicionar, atualizar, remover e mostrar registros
 class Lavoura:
     def __init__(self, user, nome, diario):
         self.user = user
         self.nome = nome
         self.diario = diario
-    
-    @staticmethod    
+
+    @staticmethod
     def verify_date_format(date):
         try:
             datetime.strptime(date, "%d/%m/%Y")
@@ -285,7 +416,11 @@ class Lavoura:
             print(trad("Data inválida"))
             return
         if data in [registro["Data"] for registro in self.diario]:
-            sobrewrite_option = input(trad("Data já existente no diário, gostaria de sobrescrever o registro? (s/n): "))
+            sobrewrite_option = input(
+                trad(
+                    "Data já existente no diário, gostaria de sobrescrever o registro? (s/n): "
+                )
+            )
             if sobrewrite_option == "n":
                 return
             if sobrewrite_option != "s":
@@ -305,7 +440,7 @@ class Lavoura:
         self.diario.append(registro)
         print("Registro adicionado com sucesso!")
         self.salvar_diario()
-        
+
     def atualizar_registro(self, data, campo, novo_valor):
         campo = campo.strip().title()
         for registro in self.diario:
@@ -355,6 +490,7 @@ class Lavoura:
             json.dump(lavouras, f, indent=4)
 
 
+# Função para mexer no diário agrícola
 def diary(user):
     print(trad("Opção escolhida: Diário Agrícola"))
     with open(f"data/lavouras.json", "r", encoding="utf-8") as f:
@@ -374,7 +510,9 @@ def diary(user):
     if len(my_lavouras_names) == 0:
         print(trad("Você não possui nenhuma lavoura"))
     lavoura_id = input(
-        trad("\nDigite 'c' se deseja criar uma nova lavoura, ou digite o índice da lavoura que deseja visualizar: ")
+        trad(
+            "\nDigite 'c' se deseja criar uma nova lavoura, ou digite o índice da lavoura que deseja visualizar: "
+        )
     )
     if lavoura_id == "c":
         nome = input(trad("Digite o nome da lavoura: "))
@@ -405,7 +543,11 @@ def diary(user):
         if opcao == "1":
             lavoura.add_registro()
         elif opcao == "2":
-            data = input(trad("Digite a data do registro que deseja atualizar (dd/mm/aaaa) (h para hoje): "))
+            data = input(
+                trad(
+                    "Digite a data do registro que deseja atualizar (dd/mm/aaaa) (h para hoje): "
+                )
+            )
             if data == "h":
                 data = datetime.now().strftime("%d/%m/%Y")
             if not lavoura.verify_date_format(data):
@@ -415,7 +557,11 @@ def diary(user):
             novo_valor = input(trad("Digite o novo valor: "))
             lavoura.atualizar_registro(data, campo, novo_valor)
         elif opcao == "3":
-            data = input(trad("Digite a data do registro que deseja remover (dd/mm/aaaa) ('h' para hoje): "))
+            data = input(
+                trad(
+                    "Digite a data do registro que deseja remover (dd/mm/aaaa) ('h' para hoje): "
+                )
+            )
             if data == "h":
                 data = datetime.now().strftime("%d/%m/%Y")
             if not lavoura.verify_date_format(data):
