@@ -38,7 +38,7 @@
 <br>
 
 <h2 name="objetivo">🎯 Objetivo</h2>
-Desenvolvimento de um aplicativo para agricultores: Criar um aplicativo que forneça informações sobre condições climáticas, manejo de cultivo, práticas agrícolas sustentáveis ​​e técnicas de conservação de alimentos. Têm como objetivo no futuro usar algoritmos de IA para fornecer recomendações personalizadas com base nas necessidades específicas de cada agricultor.
+Desenvolvimento de um aplicativo que forneça informações sobre condições climáticas, manejo de cultivo, práticas agrícolas sustentáveis ​​e técnicas de conservação de alimentos. Têm como objetivo no futuro usar algoritmos de IA para fornecer recomendações personalizadas com base nas necessidades específicas de cada agricultor.
 
 <br>
 
