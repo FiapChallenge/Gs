@@ -1,0 +1,161 @@
+@import "var.css";
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #26272b;
+}
+
+div.footer-container > div > p {
+    color: #fff;
+    padding: 10px;
+}
+div.footer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+div.footer-container > div.upper {
+    margin-top: 36px;
+    background-color: #26272b;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: start;
+    padding: 0;
+}
+
+div.footer-container {
+    color: #fff;
+}
+
+#redes-sociais-text {
+    margin-left: 38px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+#youtube-img {
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+div.logo-div.footer-container {
+    margin-left: 48px;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    transition: 0.3s ease-in-out;
+}
+
+.grayscale:hover {
+    filter: grayscale(0%);
+}
+div.footer-container {
+    background-color: #26272b;
+}
+
+.categoria-footer {
+    margin-right: 128px;
+}
+
+.logo-footer {
+    margin-left: 16px;
+    margin-right: 128px;
+}
+
+.categoria-footer > h6 {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+.categoria-footer > a {
+    display: block;
+    padding: 0;
+    margin-top: 4px;
+}
+
+.social-media {
+    margin-right: 24px;
+}
+
+.middle > a > img {
+    width: 48px;
+    margin: 8px 0px;
+}
+
+.categoria-footer > a {
+    font-size: 14px;
+    color: #737373;
+}
+
+.categoria-footer > a:hover {
+    color: var(--green);
+    transition: all 0.2s ease-in-out;
+}
+
+hr {
+    width: 100%;
+}
+
+div.middle {
+    background-color: #26272b;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 8px;
+}
+
+.line {
+    background-color: #26272b;
+    margin: 0;
+}
+
+hr {
+    margin-top: 24px;
+    margin-bottom: 8px;
+    background-color: #26272b;
+    border-top-color: #bbb;
+    opacity: 0.5;
+}
+
+#copyright {
+    color: white;
+    margin: 10px;
+    font-size: 16px;
+}
+
+#copyright:hover {
+    color: var(--green);
+}
+
+.bottom {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    background-color: #1b1b1d;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+
+.middle>a {
+    padding: 10px;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
