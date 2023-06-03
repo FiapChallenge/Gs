@@ -1,0 +1,117 @@
+@import "var.css";
+
+#hero {
+    background-image: url("../GFX/icons/farm.jpeg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    height: 100vh;
+    min-height: 800px;
+    margin-bottom: -80px;
+}
+
+#hero-text {
+    background-color: #fff;
+    padding: 24px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 24px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#hero-text>* {
+    margin: 16px 0;
+}
+
+#hero-title {
+    font-size: 36px;
+}
+
+#hero-title > h1 {
+    margin: 0;
+    padding: 0;
+}
+
+#hero-subtitle {
+    font-size: 24px;
+    color: var(--grey);
+    padding-bottom: 16px;
+}
+
+#hero-text > a {
+    font-size: 28px;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: var(--green);
+    color: #fff;
+    border-radius: 12px;
+    transition: all 0.5s ease-in-out;
+}
+
+#hero-text > a:hover {
+    background-color: #fff;
+    color: var(--green);
+}
+
+#background-video {
+    transform: translateY(-30%);
+    z-index: -1;
+}
+
+#about {
+    margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#about-text {
+    font-size: 28px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#about-text > * {
+    margin: 48px;
+}
+
+#about-text-subtitle > p {
+    font-size: 18px;
+    width: 520px;
+    text-align: center;
+    color: var(--grey);
+}
+
+.video-container {
+    position: relative;
+    width: 70%;
+    padding-bottom: 39.375%;
+    overflow: hidden;
+    border-radius: 24px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+@media screen and (max-width: 768px) {
+    #about-text {
+        flex-direction: column; 
+    }
+}
