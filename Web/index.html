@@ -15,12 +15,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="js/app.js"></script>
+    <script defer src="js/nav.js"></script>
 </head>
 
 <body id="index">
     <header>
         <nav>
-            <a id="logo" href="index.html"><img width="152px" src="GFX/logo/logo.png" alt="logo AgroSolution" /></a>
+            <a id="logo" href="index.html"><img src="GFX/logo/logo.png" alt="logo AgroSolution" /></a>
             <div id="nav-middle" class="navigation-nav">
                 <a class="active" href="">Home</a>
                 <a href="./pages/agro-sustentavel.html">Agricultura Sustentável</a>
@@ -36,14 +41,24 @@
                 </a>
                 <a id="contato" href="./pages/contato.html">Fale Conosco</a>
             </div>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown_menu">
+                <a class="active" href="">Home</a>
+                <a href="./pages/agro-sustentavel.html">Agricultura Sustentável</a>
+                <a href="./pages/ai-generativa.html">IA Generativa</a>
+                <a href="./pages/modelo-cultivo.html">Modelo de Cultivo</a>
+                <a id="contato" href="./pages/contato.html">Fale Conosco</a>
+            </div>
         </nav>
     </header>
     <main>
         <section id="hero">
             <div id="hero-text">
                 <div id="hero-title">
-                    <h1>Alimentando o mundo,</h1>
-                    <h1>Preservando o Planeta</h1>
+                    <h1 class="animate-character" style="--i:0">Alimentando o mundo,</h1>
+                    <h1 class="animate-character" style="--i:2">Preservando o Planeta</h1>
                 </div>
                 <div id="hero-subtitle">
                     <p>Explorando as fronteiras da eficiência</p>
@@ -51,21 +66,18 @@
                 </div>
                 <a href="./pages/agro-sustentavel.html">Fale Conosco</a>
             </div>
-            <!-- <video id="background-video" autoplay loop muted poster="GFX/icons/farm.jpeg">
-                <source src="GFX/icons/Farming.mp4" type="video/mp4">
-            </video> -->
         </section>
         <section id="about">
             <div id="about-text">
-                <h2>Sobre o Projeto</h2>
-                <div id="about-text-subtitle">
+                <h2 class="hidden">Sobre o Projeto</h2>
+                <div id="about-text-subtitle" class="hidden">
                     <p>Desenvolvimento de um aplicativo para agricultores que
                         forneça informações sobre condições climáticas, manejo de cultivo,
                         práticas agrícolas sustentáveis e muito mais.
                     <p>Confira o vídeo:</p>
                 </div>
             </div>
-            <div class="video-container"><iframe width="560" height="315"
+            <div class="video-container hidden"><iframe width="560" height="315"
                     src="https://www.youtube.com/embed/p385kZR-jL8" title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe></div>

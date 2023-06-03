@@ -1,7 +1,17 @@
 @import "var.css";
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 #hero {
-    background-image: url("../GFX/icons/farm.jpeg");
+    background-image: url("../GFX/icons/farmNoBackground.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,6 +44,8 @@
 #hero-title {
     font-size: 36px;
 }
+
+
 
 #hero-title > h1 {
     margin: 0;
@@ -86,9 +98,61 @@
     margin: 48px;
 }
 
+#about-text>h2.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+#about-text>h2.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+}
+
+#about-text-subtitle.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: all 1s;
+}
+
+#about-text-subtitle.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(0%);
+}
+
+.video-container.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transition-delay: 0.2s;
+}
+
+.video-container.show {
+    opacity: 1;
+    filter: blur(0px);
+}
+
+@media(prefers-reduced-motion: reduce) {
+    #about-text>h2.hidden {
+        transition: none;
+    }
+    #about-text-subtitle.hidden {
+        transition: none;
+    }
+    .video-container.hidden {
+        transition: none;
+    }
+}
+
+
+
 #about-text-subtitle > p {
     font-size: 18px;
-    width: 520px;
+    max-width: 520px;
     text-align: center;
     color: var(--grey);
 }
@@ -109,9 +173,51 @@
     height: 100%;
 }
 
+@media (max-width: 1120px) {
+    #hero {
+        background-size: cover;
+        margin-bottom: -60px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
+    #hero {
+        background-size: cover;
+        margin-bottom: -60px;
+    }
+    #hero-text {
+        transform: scale(0.8);
+    }
     #about-text {
         flex-direction: column; 
+    }
+    #about-text > * {
+        margin: 8px;
+    }
+}
+
+
+h1 {
+    background-image: linear-gradient(
+        90deg,
+        var(--black) 0%,
+        var(--green) 50%,
+        var(--lime) 100%
+    );
+    background-size: auto auto;
+    background-clip: border-box;
+    background-size: 200% auto;
+    color: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: wavegradient 4s linear infinite;
+    animation-delay: calc(1s * var(--i));
+}
+
+@keyframes wavegradient {
+    to {
+        background-position: -200% center;
     }
 }

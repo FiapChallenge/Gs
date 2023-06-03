@@ -25,10 +25,77 @@ nav {
     align-items: center;
     padding: 24px 20px;
     background-color: #fff;
+    margin: 0px 24px;
+}
+
+nav .toggle_btn {
+    color: var(--green);
+    font-size: 36px;
+    cursor: pointer;
+    display: none;
+
+}
+
+
+
+.dropdown_menu>a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+    padding: 0.5rem;
+    margin: 0.2rem;
+}
+
+.dropdown_menu>a#contato {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    outline: 0px;
+    background-color: var(--green);
+    color: #fff;
+    border-radius: 12px;
+    transition: all 0.5s ease-in-out;
+}
+
+.dropdown_menu>a#contato:hover {
+    background-color: var(--lime);
+}
+
+.dropdown_menu {
+    display: none;
+    text-decoration: none;
+    position: absolute;
+    top: 112px;
+    right: 2rem;  
+    width: 300px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+    transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
 }
 
 #logo {
-    flex: 1;
+    flex: 1;;
+}
+
+#logo > img {
+    height: 46px;
+    transition: all 0.2s ease-in-out;
+}
+
+#logo > img:hover {
+    transform: scale(1.15);
 }
 
 #nav-right {
@@ -95,7 +162,29 @@ a[href="./pages/login"] {
 
 #contato:hover {
     background-color: #fff;
-    color: var(--black);
+    color: var(--green);
+    outline: 3px solid var(--lime);
 }
 
+@media (max-width: 1180px) {
+    #nav-middle {
+        display: none;
+    }
+    #nav-right>a#contato {
+        display: none;
+    }
+    nav .toggle_btn {
+        display: block;
+    }
+    
+    .dropdown_menu {
+        display: flex;
+    }
+}
 
+@media (max-width: 768px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}
