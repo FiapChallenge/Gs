@@ -192,6 +192,10 @@ body {
     #about-text > * {
         margin: 8px;
     }
+    .video-container {
+        width: 90%;
+        padding-bottom: 56.25%;
+    }
 }
 
 h1 {
