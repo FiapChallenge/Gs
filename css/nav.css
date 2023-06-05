@@ -41,6 +41,7 @@ nav .toggle-btn {
     font-size: 36px;
     cursor: pointer;
     display: none;
+    margin-right: 12px;
 }
 
 .dropdown-menu > a {

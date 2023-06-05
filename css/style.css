@@ -1,5 +1,9 @@
 @import "var.css";
 
+:root {
+    --img-scale: 1;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -64,6 +68,7 @@ body {
     background-color: var(--green);
     color: #fff;
     border-radius: 12px;
+    border: 1px solid var(--green);
     transition: all 0.5s ease-in-out;
 }
 
@@ -78,7 +83,7 @@ body {
 }
 
 #about {
-    margin-bottom: 64px;
+    margin-bottom: 24px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -255,7 +260,8 @@ h1 {
 }
 
 @keyframes arrowBounce {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(-5px) rotate(45deg);
     }
     50% {
@@ -263,3 +269,107 @@ h1 {
     }
 }
 
+.artigos {
+    --title-color: var(--black);
+    text-align: center;
+    font-size: 3rem;
+    width: 100%;
+}
+
+.pages-summary {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 90vw;
+    padding: 0 24px;
+    margin-bottom: 64px;
+}
+
+.summary-card {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 24px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+        rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    margin: 24px;
+    width: 500px;
+    min-height: 580px;
+}
+
+.pages-summary {
+    width: 100%;
+}
+
+.pages-summary-img {
+    overflow: hidden;
+}
+
+.pages-summary-img > img {
+    object-fit: cover;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 24px 24px 0 0;
+    transform-origin: center;
+    transform: scale(var(--img-scale));
+    transition: all 0.5s ease-in-out;
+}
+
+.pages-summary-text {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pages-summary-text > h3 {
+    margin: 12px 0;
+    padding: 0;
+    font-size: 2rem;
+    color: var(--title-color);
+    transition: color 0.3s ease-out;
+}
+
+.pages-summary-text > p {
+    margin: 12px 0;
+    padding: 0;
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+
+.learn-more-btn {
+    text-decoration: none;
+    background-color: var(--green);
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 12px 24px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    border: 1px solid var(--green);
+    transition: all 0.5s ease-in-out;
+}
+
+.learn-more-btn:hover {
+    background-color: #fff;
+    color: var(--green);
+}
+
+.text-and-button {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary-card:has(:hover, :focus) {
+    --img-scale: 1.1;
+    --title-color: var(--green);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
