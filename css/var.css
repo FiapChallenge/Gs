@@ -1,6 +1,7 @@
 :root {
     --black: #333;
-    --green: #4d7e3e;
+    /* --green: #4d7e3e; */
+    --green: #4caf50;
     --lime: #48ca9a;
     --grey: #555;
 }

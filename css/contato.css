@@ -119,6 +119,11 @@ input[type="checkbox"] {
     height: 20px;
 }
 
+option {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+}
+
 @media (max-width: 880px) {
     .same-line {
         flex-wrap: wrap;
