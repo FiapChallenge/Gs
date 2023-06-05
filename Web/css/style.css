@@ -11,18 +11,18 @@ body {
 }
 
 #hero {
-    background-image: url("../GFX/icons/farmNoBackground.png");
+    background-image: url("../GFX/background/farmNoBackground.png");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    margin-top: 16px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
     height: 100vh;
-    min-height: 800px;
+    min-height: 100vh;
     margin-bottom: -80px;
 }
 
@@ -101,7 +101,7 @@ body {
 #about-text > h2.hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-80%);
+    transform: translateX(-50%);
     transition: all 1s;
 }
 
@@ -114,7 +114,7 @@ body {
 #about-text-subtitle.hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(80%);
+    transform: translateX(50%);
     transition: all 1s;
 }
 
@@ -157,7 +157,7 @@ body {
 
 .video-container {
     position: relative;
-    width: 70%;
+    width: 70vw;
     padding-bottom: 39.375%;
     overflow: hidden;
     border-radius: 24px;
@@ -178,7 +178,7 @@ body {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     #hero {
         background-size: cover;
         margin-bottom: -60px;
@@ -221,3 +221,46 @@ h1 {
         background-position: -200% center;
     }
 }
+
+.scroll-down-arrow {
+    position: absolute;
+    right: 50%;
+    /* right: 2rem; */
+    transform: translateX(50%);
+    bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 24px;
+    background-color: var(--black);
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-down-arrow:hover {
+    opacity: 1;
+}
+
+.arrow {
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 6px;
+    transform: rotate(45deg);
+    animation: arrowBounce 1s infinite;
+}
+
+@keyframes arrowBounce {
+    0%, 100% {
+        transform: translateY(-5px) rotate(45deg);
+    }
+    50% {
+        transform: translateY(3px) rotate(45deg);
+    }
+}
+

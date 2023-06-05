@@ -15,33 +15,35 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 
 nav {
     position: fixed;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 24px;
     background-color: #fff;
-    width: calc(100% - 48px);
+    width: 100vw;
     /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
 }
 
-nav .toggle_btn {
+
+#navbar {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+nav .toggle-btn {
     color: var(--green);
     font-size: 36px;
     cursor: pointer;
     display: none;
-
 }
 
-
-
-.dropdown_menu>a {
+.dropdown-menu > a {
     text-decoration: none;
     color: var(--black);
     font-size: 20px;
@@ -49,39 +51,39 @@ nav .toggle_btn {
     margin: 0.2rem;
 }
 
-.dropdown_menu>a.active {
+.dropdown-menu > a.active {
     color: var(--green);
 }
 
-.dropdown_menu>a:hover {
+.dropdown-menu > a:hover {
     color: var(--green);
     transform: scale(1.1);
 }
 
-.dropdown_menu>a#contato {
+.dropdown-menu > a#contato-dropdown {
     width: 80%;
     display: flex;
     justify-content: center;
     margin-bottom: 8px;
     padding: 8px 16px;
-    outline: 0px; 
+    outline: 0px;
     background-color: var(--green);
     color: #fff;
     border-radius: 12px;
     transition: all 0.5s ease-in-out;
 }
 
-.dropdown_menu>a#contato:hover {
+.dropdown-menu > a#contato-dropwdown:hover {
     background-color: var(--lime);
 }
 
-.dropdown_menu {
+.dropdown-menu {
     z-index: 1;
     display: none;
     text-decoration: none;
     position: absolute;
     top: 80px;
-    right: 2rem;  
+    right: 2rem;
     width: 300px;
     background: rgb(255, 255, 255);
     border-radius: 10px;
@@ -90,20 +92,21 @@ nav .toggle_btn {
     align-items: center;
     justify-content: center;
     height: 0;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     transition: height 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dropdown_menu.open {
+.dropdown-menu.open {
     height: 240px;
 }
 
-.toggle_btn i {
+.toggle-btn i {
     min-width: 36px;
 }
 
 #logo {
-    flex: 1;;
+    margin-left: 24px;
+    flex: 1;
 }
 
 #logo > img {
@@ -119,6 +122,10 @@ nav .toggle_btn {
     flex: 1;
     flex-direction: row;
     justify-content: flex-end;
+}
+
+#contato {
+    margin-right: 24px;
 }
 
 .navigation-nav {
@@ -168,7 +175,7 @@ a[href="./pages/login"] {
     color: var(--black);
 }
 
-#login.active{
+#login.active {
     filter: invert(45%) sepia(13%) saturate(1536%) hue-rotate(61deg)
         brightness(93%) contrast(89%);
 }
@@ -187,36 +194,39 @@ a[href="./pages/login"] {
     transition: all 0.3s ease-in-out;
 }
 
-#contato:hover {
+#contato:hover{
     background-color: #fff;
     color: var(--green);
     outline: 3px solid var(--lime);
     transform: scale(1.1);
 }
 
-@media (max-width: 1180px) {
+main {
+    margin-top: 100px;
+}
+
+@media (max-width: 1320px) {
     #nav-middle {
         display: none;
     }
-    #nav-right>a#contato {
+    #nav-right > a#contato {
         display: none;
     }
-    nav .toggle_btn {
+    nav .toggle-btn {
         display: block;
     }
-    
-    .dropdown_menu {
+
+    .dropdown-menu {
         display: flex;
+    }
+    main {
+        margin-top: 28px;
     }
 }
 
 @media (max-width: 768px) {
-    .dropdown_menu {
+    .dropdown-menu {
         left: 2rem;
         width: unset;
     }
-}
-
-main {
-    margin-top: 100px;
 }

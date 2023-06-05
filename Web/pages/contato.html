@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agricultura Sustentável</title>
     <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/contato.css" />
     <link rel="stylesheet" href="../css/footer.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,11 +19,12 @@
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script defer src="../js/nav.js"></script>
+    <script defer src="../js/form.js"></script>
 </head>
 
 <body id="agro-sustentavel">
     <header>
-        <nav>
+        <nav id="navbar">
             <a id="logo" href="../index.html"><img src="../GFX/logo/logo.png" alt="logo AgroSolution" /></a>
             <div id="nav-middle" class="navigation-nav">
                 <a href="../index.html">Home</a>
@@ -39,33 +41,103 @@
                 </a>
                 <a class="active" id="contato" href="contato.html">Fale Conosco</a>
             </div>
-            <div class="toggle_btn">
+            <div class="toggle-btn">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <div class="dropdown_menu">
+            <div class="dropdown-menu">
                 <a href="../index.html">Home</a>
                 <a href="agro-sustentavel.html">Agricultura Sustentável</a>
                 <a href="ai-generativa.html">IA Generativa</a>
                 <a href="modelo-cultivo.html">Modelo de Cultivo</a>
-                <a class="active" id="contato" href="contato.html">Fale Conosco</a>
+                <a class="active" id="contato-dropdown" href="contato.html">Fale Conosco</a>
             </div>
         </nav>
     </header>
     <main>
+        <div id="form-wrapper">
+            <form id="message-form">
+                <div class="same-line">
+                    <div class="label-input">
+                        <label for="fname">Nome Completo *:</label>
+                        <input type="text" id="fname" name="fname" required>
+                    </div>
+                    <div class="label-input">
+                        <label for="email">Endereço de Email *:</label>
+                        <input pattern="[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+" type="email" id="email" name="email" required>
+                    </div>
+                    <div class="label-input">
+                        <label for="phone">Número de Telefone: *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
 
+                <div class="same-line">
+                    <div class="label-input">
+                        <label for="company">Organização/Empresa:</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="label-input">
+                        <label for="position">Cargo:</label>
+                        <input type="text" id="position" name="position">
+                    </div>
+                    <div class="label-input">
+                        <label for="interest">Interesse Principal:</label>
+                        <select id="interest" name="interest">
+                            <option value="" disabled selected hidden>Selecione sua opção...</option>
+                            <option value="sustainable-agriculture">Agricultura Sustentável</option>
+                            <option value="ai">Inteligências Artificiais Generativas</option>
+                            <option value="efficient-cultivation">Modelos de Cultivo Eficientes</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="label-input">
+                    <label for="address">Endereço:</label>
+                    <input type="text" id="address" name="address">
+                </div>
+
+                <div class="label-input">
+                    <label for="subject">Assunto da Mensagem: *</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="label-input">
+                    <label for="message">Mensagem: *</label>
+                    <textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                </div>
+
+                <div class="label-input">
+                    <label for="source">Como você soube sobre nós?</label>
+                    <select id="source" name="source">
+                        <option value="" disabled selected hidden>Selecione sua opção...</option>
+                        <option value="web-search">Pesquisa na Web</option>
+                        <option value="reference">Referência</option>
+                        <option value="youtube">Youtube</option>
+                        <option value="social-media">Redes Sociais</option>
+                    </select>
+                </div>
+
+                <div id="privacy-label-input" class="label-input">
+                    <label for="privacy"> Eu concordo com a Política de Privacidade *</label>
+                    <input class="error" type="checkbox" id="privacy" name="privacy" value="accepted" required>
+                </div>
+                <p id="hint-subtitle">Campos com * são obrigatórios</p>
+                <input class="submit-btn" type="submit" value="Enviar">
+            </form>
+        </div>
     </main>
     <footer>
         <div class="footer-container">
             <div class="upper">
                 <div class="logo-footer">
-                    <a href="#"><img class="grayscale" width="184" src="../GFX/logo/logo.png" alt="Logo do Guinchei"></a>
+                    <a href="#"><img class="grayscale" width="184" src="../GFX/logo/logo.png"
+                            alt="Logo do Guinchei"></a>
                 </div>
                 <div class="categoria-footer">
                     <h6>Créditos</h6>
-                    <a target="_blank" href="https://www.flaticon.com/br/icones-gratis/perfil"
+                    <a target="-blank" href="https://www.flaticon.com/br/icones-gratis/perfil"
                         title="perfil ícones">Ícone de Login por
                         inkubators - Flaticon</a>
-                    <a target="_blank" href="https://www.flaticon.com/br/icones-gratis/rede-social"
+                    <a target="-blank" href="https://www.flaticon.com/br/icones-gratis/rede-social"
                         title="rede social ícones">Ícones
                         rede sociais por riajulislam - Flaticon</a>
                 </div>
@@ -80,14 +152,14 @@
             </div>
             <div class="middle">
                 <hr>
-                <a target="_blank" href="https://github.com/Asteriuz/FiapChallenge"><img class="grayscale"
+                <a target="-blank" href="https://github.com/Asteriuz/FiapChallenge"><img class="grayscale"
                         src="../GFX/icons/github.png" alt="logo do github"></a>
-                <a target="_blank" href="https://www.youtube.com/channel/UCTAMms64mj1OIKF6FRvfEsA"><img id="youtube"
+                <a target="-blank" href="https://www.youtube.com/channel/UCTAMms64mj1OIKF6FRvfEsA"><img id="youtube"
                         class="grayscale" src="../GFX/icons/youtube.png" alt="logo do youtube"></a>
             </div>
         </div>
         <div class="bottom">
-            <a id="copyright" target="_blank" href="https://github.com/FiapChallenge">
+            <a id="copyright" target="-blank" href="https://github.com/FiapChallenge">
                 <p>Copyright © 2023. AgroSolution, Inc.</p>
             </a>
         </div>

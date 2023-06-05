@@ -18,3 +18,14 @@ hiddenElements.forEach(hiddenElement => observer.observe(hiddenElement));
 if (window.innerWidth < 768) {
     hiddenElements.forEach(hiddenElement => hiddenElement.classList.remove('hidden'));
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    var arrowElement = document.querySelector('.scroll-down-arrow');
+
+    arrowElement.addEventListener('click', function() {
+        window.scrollTo({
+            top: window.innerHeight + 24,
+            behavior: 'smooth'
+        });
+    });
+});
