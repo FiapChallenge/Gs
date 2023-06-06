@@ -65,4 +65,10 @@ public class Usuario {
     public ImageIcon getFoto() {
         return foto;
     }
+
+    // Sobreescrita de método
+    @Override
+    public String toString() {
+        return "Usuario [email=" + email + ", nome=" + nome + "]";
+    }
 }

@@ -10,8 +10,24 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Sistema {
-    // private List<Posts> posts = new ArrayList<Posts>();
+    private List<Posts> posts = new ArrayList<Posts>();
     private List<Usuario> usuarios = new ArrayList<Usuario>();
+
+    public Sistema() {
+        loadData();
+    }
+
+    public List<Posts> getPosts() {
+        return posts;
+    }
+
+    public void addPost(Posts post) {
+        posts.add(post);
+    }
+
+    public List<Usuario> getUsuarios() {
+        return usuarios;
+    }
 
     public void saveData() {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter("data/users.txt"))) {
@@ -43,6 +59,7 @@ public class Sistema {
         }
     }
 
+    // Sobrecarga de método
     public void addUsuario(String nome, String email, String senha) {
         Usuario usuario = new Usuario(nome, email, senha);
         usuarios.add(usuario);
@@ -60,4 +77,5 @@ public class Sistema {
         }
         return null;
     }
+
 }

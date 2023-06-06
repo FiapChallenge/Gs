@@ -8,12 +8,13 @@ public class App {
         Sistema sb = new Sistema();
         Usuario usuarioLogado = null;
         OpenWeather.getInfo("São Paulo");
-        sb.loadData();
 
         if (debugApp) {
             usuarioLogado = sb.buscarUsuario("augustobb@live.com");
+            System.out.println(usuarioLogado);
         } else {
             usuarioLogado = Interface.login(sb);
+            System.out.println(usuarioLogado);
         }
 
         String menu = "0 - Sair\n1 - Configurações\n2 - Clima\n3 - Diário Agrícola\n4 - Ver Posts\n5 - Criar um Post\n6 - Remover um Post\n7 - FAQ\n8 - Sugestões de Melhoria\n9 - Trocar de Usuário\n\nEscolha uma opção:";
@@ -35,10 +36,13 @@ public class App {
                 case 3:
                     break;
                 case 4:
+                    Interface.show_posts(sb);
                     break;
                 case 5:
+                    Interface.create_post(sb, usuarioLogado);
                     break;
                 case 6:
+                    Interface.delete_post(sb, usuarioLogado);
                     break;
                 case 7:
                     break;
@@ -46,6 +50,7 @@ public class App {
                     break;
                 case 9:
                     usuarioLogado = Interface.login(sb);
+                    System.out.println(usuarioLogado);
                     break;
                 default:
                     System.exit(0);
