@@ -48,8 +48,9 @@ section > img {
 
 .section-text > p { 
     margin: 8px;
-    font-size: 22px;
-    color: var(--grey);
+    font-size: 21px;
+    color: var(--black);
+    /* color: var(--grey); */
 }
 
 ul {
