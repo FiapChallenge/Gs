@@ -1,0 +1,6 @@
+Asteriuz;augustobb@live.com;pandorinha;GFX/profiles/asteriuz.png
+Gabs;gabs.gnt@hotmail.com;gui;GFX/profiles/gabs.png
+Gribl;gribl88@gmail.com;maya;GFX/profiles/gribl.png
+Souza;queiroz@fiap.com.br;SouzaS;GFX/profiles/queiroz.png
+Thiago;thiagoyama@fiap.com.br;fiap123;GFX/profiles/thiago.png
+Teste;teste@teste.com;teste123;C:\Users\augus\Documents\oneStore.png

@@ -1,0 +1,8 @@
+Temperatura
+Temperatura máxima
+Temperatura mínima
+Umidade
+Clima
+Vento
+Nascer do Sol
+Pôr do Sol
