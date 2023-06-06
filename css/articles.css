@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     overflow-x: hidden;
 }
 
@@ -13,11 +13,10 @@
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    width: 100vw;
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 32px 0px;
 }
 
 .initial > img {
@@ -39,7 +38,6 @@ section > img {
     display: flex;
     flex-direction: column;
     width: 600px;
-    padding: 24px;
     font-size: 1.5em;
 }
 
@@ -112,8 +110,19 @@ h2 {
         flex-direction: row;
     }
 
-    .initial, section {
-        padding: 12px;
+    .initial-text{
+        width: 90%;
     }
-    
+
+    .section-text {
+        width: 90%;
+    }
+
+    main {
+        margin-top: 64px;
+    }
+
+    .initial-text>h1 {
+        font-size: 1.8em;
+    }
 }
