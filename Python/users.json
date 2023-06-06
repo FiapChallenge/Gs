@@ -18,5 +18,10 @@
         "nome": "Queiroz",
         "email": "queiroz@fiap.com.br",
         "senha": "SouzaS"
+    },
+    "teste@teste.com": {
+        "nome": "Teste",
+        "email": "teste@teste.com",
+        "senha": "teste123"
     }
 }
