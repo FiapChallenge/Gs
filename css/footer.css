@@ -160,7 +160,7 @@ p {
     padding: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1130px) {
     div.footer-container > div.upper {
         flex-direction: column;
     }
