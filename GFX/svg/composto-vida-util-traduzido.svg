@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+<svg id="Camada_1" data-name="Camada 1"
+  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
   <defs>
     <style>
       .cls-1 {
@@ -1184,10 +1185,32 @@
     </g>
   </g>
   <rect class="cls-18" x="368.24" y="119.51" width="89.95" height="19.08"/>
-  <text class="cls-22" transform="translate(371.76 136.04) scale(1.17 1)"><tspan x="0" y="0">FERTILIZANTE</tspan></text>
-  <text class="cls-21" transform="translate(55.95 135.37) scale(1.67 1)"><tspan x="0" y="0">RESTOS</tspan></text>
-  <text class="cls-21" transform="translate(85.03 466.7) scale(1.67 1)"><tspan x="0" y="0">COMIDA</tspan></text>
-  <text class="cls-21" transform="translate(351.73 467.7) scale(1.67 1)"><tspan x="0" y="0">CRESCE</tspan></text>
-  <text class="cls-20" transform="translate(157.58 296.45) scale(1.17 1)"><tspan x="0" y="0">COMPOSTO</tspan></text>
-  <text class="cls-14" transform="translate(183.51 319.56) scale(.92 1)"><tspan x="0" y="0">C</tspan><tspan class="cls-36" x="13.18" y="0">I</tspan><tspan x="22.94" y="0">C</tspan><tspan class="cls-41" x="36.12" y="0">L</tspan><tspan x="46.62" y="0">O </tspan><tspan class="cls-44" x="67.13" y="0">D</tspan><tspan x="81.51" y="0">A </tspan><tspan class="cls-34" x="101.64" y="0">V</tspan><tspan x="116.7" y="0">I</tspan><tspan class="cls-42" x="126.91" y="0">D</tspan><tspan x="141.29" y="0">A</tspan></text>
+  <text class="cls-22" transform="translate(371.76 136.04) scale(1.17 1)">
+    <tspan x="0" y="0">FERTILIZANTE</tspan>
+  </text>
+  <text class="cls-21" transform="translate(55.95 135.37) scale(1.67 1)">
+    <tspan x="0" y="0">RESTOS</tspan>
+  </text>
+  <text class="cls-21" transform="translate(85.03 466.7) scale(1.67 1)">
+    <tspan x="0" y="0">COMIDA</tspan>
+  </text>
+  <text class="cls-21" transform="translate(351.73 467.7) scale(1.67 1)">
+    <tspan x="0" y="0">CRESCE</tspan>
+  </text>
+  <text class="cls-20" transform="translate(157.58 296.45) scale(1.17 1)">
+    <tspan x="0" y="0">COMPOSTO</tspan>
+  </text>
+  <text class="cls-14" transform="translate(183.51 319.56) scale(.92 1)">
+    <tspan x="0" y="0">C</tspan>
+    <tspan class="cls-36" x="13.18" y="0">I</tspan>
+    <tspan x="22.94" y="0">C</tspan>
+    <tspan class="cls-41" x="36.12" y="0">L</tspan>
+    <tspan x="46.62" y="0">O </tspan>
+    <tspan class="cls-44" x="67.13" y="0">D</tspan>
+    <tspan x="81.51" y="0">A </tspan>
+    <tspan class="cls-34" x="101.64" y="0">V</tspan>
+    <tspan x="116.7" y="0">I</tspan>
+    <tspan class="cls-42" x="126.91" y="0">D</tspan>
+    <tspan x="141.29" y="0">A</tspan>
+  </text>
 </svg>
