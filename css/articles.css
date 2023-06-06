@@ -1,0 +1,119 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.initial, section {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 32px 0px;
+}
+
+.initial > img {
+    width: clamp(350px, 50%, 600px);
+    border-radius: 24px;
+    margin: 24px;
+}
+
+section > img {
+    width: clamp(300px, 50%, 600px);
+    margin: 24px;
+}
+
+.rounded {
+    border-radius: 24px;
+}
+
+.initial-text, .section-text {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 24px;
+    font-size: 1.5em;
+}
+
+.initial-text > p {
+    color: var(--grey);
+}
+
+.section-text > p { 
+    margin: 8px;
+    font-size: 22px;
+    color: var(--grey);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+ul li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--green); /* Adjust the color as desired */
+}
+
+.verde {
+    background-color: rgba(224, 242, 241, 0.7);
+}
+
+.roxo {
+    background-color: rgba(243, 229, 245, 0.7);
+}
+
+.laranja {
+    background-color: rgba(255, 204, 188, 0.7);
+}
+
+
+.roxo>div>ul>li:before {
+    background-color: #ba68c8;
+    color: var(--white);
+}
+
+.laranja>div>ul>li:before {
+    background-color: #FF725E;
+    color: var(--white);
+}
+
+h2 {
+    margin-bottom: 8px;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+@media (max-width: 1500px) {
+    .reverse {
+        flex-direction: row;
+    }
+
+    .initial, section {
+        padding: 12px;
+    }
+    
+}
