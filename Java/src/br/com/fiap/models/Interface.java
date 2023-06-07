@@ -410,7 +410,7 @@ public class Interface {
                 "Siga esses passos:\n1 - Verifique se o nome da cidade está escrito corretamente\n2 - Verifique se está conectado a internet\n3 - Se o probelma persistir, talvez a API esteja fora do ar ou tenha atingido o número máximo, por favor tente novamente mais tarde");
         questions.put(1, question1);
         HashMap<String, String> question2 = new HashMap<String, String>();
-        question2.put("q", "Por que a tradução não funciona?");
+        question2.put("q", "Exemplos perguntas futuras:\nPor que a tradução não funciona?");
         question2.put("a",
                 "Siga esses passos:\n1 - Verifique se o idioma está escrito corretamente\n2 - Verifique se está conectado a internet\n3 - Se o probelma persistir, talvez a API esteja fora do ar ou tenha atingido o número máximo, por favor tente novamente mais tarde");
         questions.put(2, question2);
