@@ -44,10 +44,14 @@ public class Sistema {
         } catch (IOException e) {
             System.out.println("Erro ao salvar arquivo");
         }
-        try (BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("data/posts.txt"), "UTF-8"))) {
+
+        try (BufferedWriter bw = new BufferedWriter(
+                new OutputStreamWriter(new FileOutputStream("data/posts.txt"), "UTF-8"))) {
             for (Posts post : posts) {
+                post.setConteudo(post.getConteudo().replaceAll("\n", "\\n"));
+                String tags = String.join(",", post.getTags());
                 String row = post.getTitulo() + ";" + post.getConteudo() + ";" + post.getData() + ";"
-                        + post.getAutor().getEmail() + ";" + post.getTags();
+                        + post.getAutor().getEmail() + ";" + tags;
                 bw.write(row);
                 bw.newLine();
             }
@@ -72,7 +76,8 @@ public class Sistema {
             usuarios.add(usuario);
         }
         data = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream("data/posts.txt"), "UTF-8"))) {
+        try (BufferedReader br = new BufferedReader(
+                new InputStreamReader(new FileInputStream("data/posts.txt"), "UTF-8"))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] values = line.split(";");

@@ -1,5 +1,4 @@
 import br.com.fiap.models.*;
-import br.com.fiap.utilities.*;
 
 public class App {
     static boolean debugApp = true;
@@ -7,7 +6,6 @@ public class App {
     public static void main(String[] args) throws Exception {
         Sistema sb = new Sistema();
         Usuario usuarioLogado = null;
-        OpenWeather.getInfo("São Paulo");
 
         if (debugApp) {
             usuarioLogado = sb.buscarUsuario("augustobb@live.com");
