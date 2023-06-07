@@ -1,0 +1,107 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E2235AAA-5870-1327-01C8-81A161E92190" name="Pluviosidade">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:09:30 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_chuva" id="FDE14BAC-1878-5CA1-61FB-6A1316370B9A">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:09:40 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_estado" id="7A84F100-7DBF-CD08-803D-358AE02E1D65">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:09:53 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="volumetria" id="1FC7F5ED-F604-4845-770B-6FD025364CDE">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:09:56 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="periodicidade" id="49A65A79-AB18-71C7-1648-0407591F8DBA">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:09:59 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="intensidade" id="559E24BF-73B3-B1C5-C0DF-93FBBD2E1965">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:10:04 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="efeitos_solo" id="8B0BCCEE-6A2E-D906-3376-7C5504AB521E">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:10:08 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo_chuva" id="7CEC7FCE-88A7-8F8F-13AF-199E73A737C0">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:10:11 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="11ACF651-4DD9-62AE-7C28-CDC0613BB014" name="Pluviosidade PK">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:16:28 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FDE14BAC-1878-5CA1-61FB-6A1316370B9A</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

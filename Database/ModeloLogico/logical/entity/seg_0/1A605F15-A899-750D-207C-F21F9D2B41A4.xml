@@ -1,0 +1,121 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1A605F15-A899-750D-207C-F21F9D2B41A4" name="Clima_Estado">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:08:04 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_clima_estado" id="FF5C72EE-12EF-A5A0-D79E-55D2DA361A73">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:08:12 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_estado" id="D2F50A2D-F6AD-1CC2-92E2-043B1208E725">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:08:26 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="temperatura" id="BBB268B1-323B-0D95-BC15-DD498E75F0BE">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:08:31 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="umidade" id="2B01DCEE-2329-5133-324D-6E90EC774CA0">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:08:33 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="velocidade_vento" id="190525E4-931F-FEFB-1C3F-6F975A1BAD4D">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:08:36 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_clima" id="523C0645-F579-0476-2FA3-B3E988CE915B">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:08:58 UTC</createdTime>
+<generatorID>2B1DA3C0-DDAC-60D1-2926-3DA46843C9F5</generatorID>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<referedAttribute>8A73D4FC-86CA-AF6E-03C7-F7AF67050C32</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_estado1" id="A8270273-EA32-7A53-B07C-B52C65E699FF">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:10:47 UTC</createdTime>
+<generatorID>7C3FB924-F6E6-0016-2C21-8E1CE7B18240</generatorID>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<referedAttribute>890B6B94-EF6A-CC0B-B660-360D37108E3E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_chuva" id="C4F53977-1BCC-5A30-4F3C-8DD03DF25ACE">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:16:32 UTC</createdTime>
+<generatorID>D1023B66-5AE1-BD97-3B0A-1365DC444912</generatorID>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<referedAttribute>FDE14BAC-1878-5CA1-61FB-6A1316370B9A</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="699EB430-7EB1-F509-EC54-55A1ED88E3B9" name="Clima_Estado PK">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 21:08:51 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FF5C72EE-12EF-A5A0-D79E-55D2DA361A73</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
