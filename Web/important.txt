@@ -1,7 +1,0 @@
-Colors:
-green: #4d7e3e
-lime: #48ca9a
-
-Atribuição:
-<a href="https://www.flaticon.com/br/icones-gratis/perfil" title="perfil ícones">Perfil ícones criados por inkubators - Flaticon</a>
-<a href="https://www.flaticon.com/br/icones-gratis/rede-social" title="rede social ícones">Rede social ícones criados por riajulislam - Flaticon</a>
