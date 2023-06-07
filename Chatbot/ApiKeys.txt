@@ -1,4 +1,4 @@
-Telegram: 5528227798:AAEpxSyzpkfihq7S20FbMNl5Aw3YtKVqrAM
+TelegramBotApi: 5528227798:AAEpxSyzpkfihq7S20FbMNl5Aw3YtKVqrAM
 
 TTS API: zCJqmqLey9IxeHHveLn5BAiKX92SWTj2ZbtfE7y2Hehv
 TTS URL: https://api.au-syd.text-to-speech.watson.cloud.ibm.com/instances/5940960f-ba6d-4cdf-9102-48f075fccc73
@@ -12,3 +12,11 @@ Language URL: https://api.au-syd.language-translator.watson.cloud.ibm.com/instan
 Watson API: rP5wHVt-epULyimZw04vPKt1ajl6FtMSzqou5J92of5_
 Watson URL: https://api.au-syd.assistant.watson.cloud.ibm.com/instances/51e8ae74-72da-41d8-860d-ef068ca0e63a
 Watson ID: ed684d1a-7d0a-48ed-834d-7284344422a0
+
+
+
+👤| Integrantes - RM :
+Augusto Barcelos Barros - 98078
+Gabriel Gribl de Carvalho - 96270
+Gabriel Souza de Queiroz - 98570
+Gabriela Zanotto Alves Rodrigues - 551629

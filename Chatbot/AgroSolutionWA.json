@@ -1,0 +1,937 @@
+{
+  "intents": [
+    {
+      "intent": "contato",
+      "examples": [
+        {
+          "text": "Como faço para entrar em contato com o serviço de guincho?"
+        },
+        {
+          "text": "Preciso chamar um guincho. Onde posso encontrar o telefone para contato?"
+        },
+        {
+          "text": "Preciso de um guincho imediatamente. Quais são os números de telefone para chamadas de emergência?"
+        },
+        {
+          "text": "Preciso do contato para chamar um guincho. Pode me passar?"
+        },
+        {
+          "text": "Quero chamar um guincho para uma emergência. Quais são os contatos disponíveis?"
+        },
+        {
+          "text": "Quero o número de telefone do serviço de guincho, por favor."
+        },
+        {
+          "text": "Quero pedir um guincho. Quais são os números de telefone para contato?"
+        },
+        {
+          "text": "Quero solicitar um guincho. Como posso encontrá-los?"
+        },
+        {
+          "text": "tem algum contato para acidente?"
+        },
+        {
+          "text": "teria algum outro contato?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "demora",
+      "examples": [
+        {
+          "text": "Qual é o tempo de demora?"
+        },
+        {
+          "text": "Qual o tempo útil para responder?"
+        },
+        {
+          "text": "Quanto tempo demora o fale conosco"
+        },
+        {
+          "text": "Quanto tempo demora para receber uma resposta após utilizar o formulário de contato?"
+        },
+        {
+          "text": "Quanto tempo demora para ter uma resposta do fale conosco?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "despedida",
+      "examples": [
+        {
+          "text": "adeus"
+        },
+        {
+          "text": "Até a próxima vez"
+        },
+        {
+          "text": "Até a próxima vez!"
+        },
+        {
+          "text": "Até logo!"
+        },
+        {
+          "text": "Até mais"
+        },
+        {
+          "text": "Até nossa próxima conversa"
+        },
+        {
+          "text": "Foi um prazer conversar com você. Até breve!"
+        },
+        {
+          "text": "Nos falamos em breve!"
+        },
+        {
+          "text": "Ótimo dia para você bot!"
+        },
+        {
+          "text": "Precisarei conversar novamente com você em breve"
+        },
+        {
+          "text": "Tchau! Volto a qualquer momento se precisar."
+        },
+        {
+          "text": "Tenha um bom dia!"
+        },
+        {
+          "text": "Tenha um excelente dia"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "duvidaAgriculturaSustentavel",
+      "examples": [
+        {
+          "text": "Como a agricultura sustentável difere da agricultura convencional?"
+        },
+        {
+          "text": "Como a agricultura sustentável promove a conservação do solo?"
+        },
+        {
+          "text": "Como é a agricultura sustentável?"
+        },
+        {
+          "text": "Me fale sobre agricultura sustentável"
+        },
+        {
+          "text": "O que é agricultura sustentável?"
+        },
+        {
+          "text": "O que os agricultores podem fazer para adotar práticas mais sustentáveis em suas atividades?"
+        },
+        {
+          "text": "Quais são as práticas agrícolas sustentáveis mais comuns?"
+        },
+        {
+          "text": "Quais são as tecnologias emergentes na agricultura sustentável?"
+        },
+        {
+          "text": "Quais são os benefícios da agricultura sustentável para o meio ambiente?"
+        },
+        {
+          "text": "Quais são os princípios fundamentais da agricultura sustentável?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "duvidaExemploAgricola",
+      "examples": [
+        {
+          "text": "Como posso fazer uma agricultura sustentável?"
+        },
+        {
+          "text": "Exemplifique agriculturas sustentaveis"
+        },
+        {
+          "text": "Exemplos de praticas agricolas sustentaveis"
+        },
+        {
+          "text": "Me de alguns exemplos de praticas agricolas sustentaveis por favor"
+        },
+        {
+          "text": "Quais são alguns exemplos de práticas agrícolas sustentáveis?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "duvidaFuncionalidadeIAGenarativa",
+      "examples": [
+        {
+          "text": "Como a IA generativa pode ajudar os agricultores?"
+        },
+        {
+          "text": "Como a IA generativa pode melhorar a produtividade agrícola?"
+        },
+        {
+          "text": "Como as IA generativas podem auxiliar na agricultura?"
+        },
+        {
+          "text": "De que forma a IA generativa beneficia a agricultura?"
+        },
+        {
+          "text": "De que forma a IA generativa melhora a qualidade dos produtos agrícolas?"
+        },
+        {
+          "text": "De que forma as Inteligências Artificiais Generativas podem ser úteis na agricultura?"
+        },
+        {
+          "text": "Exemplos de usos da IA generativa na agricultura"
+        },
+        {
+          "text": "Quais são os exemplos práticos de como a IA generativa auxilia os agricultores?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "duvidaFuncionamentoIAGenerativa",
+      "examples": [
+        {
+          "text": "Como as Inteligências Artificiais Generativas aprendem e geram conteúdo?"
+        },
+        {
+          "text": "Como as Inteligências Artificiais Generativas fazem o que faz?"
+        },
+        {
+          "text": "Como as Inteligências Artificiais Generativas são treinadas?"
+        },
+        {
+          "text": "Como funcionam as Inteligências Artificiais Generativas?"
+        },
+        {
+          "text": "Como que as IA generativa funcionam?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "duvidaInteligênciaArtificial",
+      "examples": [
+        {
+          "text": "conte me sobre IA generativas"
+        },
+        {
+          "text": "explique para mim sobre IA generativas"
+        },
+        {
+          "text": "IA generativa, o que é?"
+        },
+        {
+          "text": "me fale sobre IA generativas"
+        },
+        {
+          "text": "O que são IA generativa"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "exemplosModeloCultivo",
+      "examples": [
+        {
+          "text": "Exemplos de Modelo de cultivos"
+        },
+        {
+          "text": "Fale sobre alguns modelos de cultivo para mim por favor"
+        },
+        {
+          "text": "Me diga alguns exemplos de modelo de cultivo"
+        },
+        {
+          "text": "Poderia me dar alguns exemplos simples de modelos de cultivo que os agricultores utilizam?"
+        },
+        {
+          "text": "Quais os melhores modelos de cultivo usado na agricultura?"
+        },
+        {
+          "text": "Quais são alguns exemplos de modelos de cultivo utilizados na agricultura?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "inicioCadastro",
+      "examples": [
+        {
+          "text": "cadastro"
+        },
+        {
+          "text": "fazer meu cadastro"
+        },
+        {
+          "text": "gostaria de me cadastrar"
+        },
+        {
+          "text": "me cadastre"
+        },
+        {
+          "text": "podemos começar o cadastro?"
+        },
+        {
+          "text": "quero me cadastrar"
+        },
+        {
+          "text": "vamos fazer meu cadastro?"
+        },
+        {
+          "text": "vamos iniciar o cadastro"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "obrigado",
+      "examples": [
+        {
+          "text": "Agradeço demais!"
+        },
+        {
+          "text": "Muito obrigada!"
+        },
+        {
+          "text": "Muito obrigado pela ajuda!"
+        },
+        {
+          "text": "Obrigada mesmo!"
+        },
+        {
+          "text": "Obrigadão!"
+        },
+        {
+          "text": "Obrigado!"
+        },
+        {
+          "text": "Obrigado de coração!"
+        },
+        {
+          "text": "Te agradeço muito!"
+        },
+        {
+          "text": "Valeu!"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "saudacao",
+      "examples": [
+        {
+          "text": "Boa noite"
+        },
+        {
+          "text": "Boa tarde"
+        },
+        {
+          "text": "Bom dia"
+        },
+        {
+          "text": "Como está?"
+        },
+        {
+          "text": "Como vai?"
+        },
+        {
+          "text": "E aí"
+        },
+        {
+          "text": "E aí meu chapa?"
+        },
+        {
+          "text": "Oi"
+        },
+        {
+          "text": "Olá"
+        },
+        {
+          "text": "tudo beleza?"
+        },
+        {
+          "text": "Tudo bem?"
+        },
+        {
+          "text": "Tudo tranquilo?"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "tecnologiaAgronegocio",
+      "examples": [
+        {
+          "text": "Como a tecnologia afeta o agronegócio?"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "dados",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "email",
+          "patterns": [
+            "[^@ \\t\\r\\n]+@[^@ \\t\\r\\n]+\\.[^@ \\t\\r\\n]+"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "nomeCompleto",
+          "patterns": [
+            "^[a-zA-Z]+(([',. -][a-zA-Z ])?[a-zA-Z]*)*$"
+          ]
+        },
+        {
+          "type": "patterns",
+          "value": "telefone",
+          "patterns": [
+            "^\\(?[1-9]{2}\\)? ?(?:[2-8]|9[1-9])[0-9]{3}\\-?[0-9]{4}$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "start",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "/start",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://github.com/Asteriuz",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Bem-vindo",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Sou o Bot do AgroSolution, estou aqui para ajuda-lo a fazer o cadastro ou responder dúvidas sobre o aplicativo. Sinta-se livre para me perguntar a qualquer hora"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome || @start",
+      "dialog_node": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "title": "Em outros casos",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Eu não entendi. Você pode tentar reformular a frase."
+              },
+              {
+                "text": "Você pode reformular sua afirmação? Eu não estou entendendo."
+              },
+              {
+                "text": "Eu não entendi o sentido."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Em outros casos",
+      "previous_sibling": "node_6_1684132752302",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tudo certo, qual seria o seu melhor número de celular de contato?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1683595710326",
+      "context": {
+        "email": "@dados.literal"
+      },
+      "conditions": "@dados:email",
+      "dialog_node": "node_10_1683595829520"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#contato",
+      "dialog_node": "node_10_1684697855133",
+      "previous_sibling": "node_6_1686115659288"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Uso eficiente da água e reutilização da água da chuva\nControle biológico de pragas e doenças\nRedução do revolvimento do solo\nImplementação de agroflorestas\nUso de tecnologias de agricultura de precisão"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#duvidaExemploAgricola",
+      "dialog_node": "node_10_1686121371802",
+      "previous_sibling": "node_2_1686121369916"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Obs: Lembre-se de adicionar o DDD\nExemplo: 11 912345678\nDigite um telefone válido:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1683595829520",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1683595960450"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_2_1683914266539",
+      "previous_sibling": "node_4_1683595960450"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Diversificação e rotação de culturas\nManejo integrado de pragas e doenças\nConservação dos recursos hídricos\nAgricultura de conservação\nAgrofloresta"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#duvidaAgriculturaSustentavel",
+      "dialog_node": "node_2_1686121369916",
+      "previous_sibling": "node_5_1683595479644"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite um e-mail válido:"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1683595710326",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1683595829520"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_3_1683913915405",
+      "previous_sibling": "node_10_1683595829520"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Olá! Como posso ajudá-lo(a) hoje?"
+              },
+              {
+                "text": "Hey! O que posso fazer por você hoje?"
+              },
+              {
+                "text": "Olá! Estou à disposição para ajudá-lo(a) em qualquer coisa que precisar."
+              },
+              {
+                "text": "Olá! Estou aqui para ajudá-lo(a) a resolver qualquer problema que tiver."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#saudacao",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_3_1684121685870",
+      "previous_sibling": "node_10_1684697855133"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Certo, qual o seu e-mail?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1683595479644",
+      "context": {
+        "nome": "@dados.literal"
+      },
+      "conditions": "@dados:nomeCompleto",
+      "dialog_node": "node_4_1683595710326"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tudo pronto, cadastro concluído!\nNome: $nome\nEmail: $email\nTelefone: $telefone"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1683595829520",
+      "context": {
+        "telefone": "@dados.literal"
+      },
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "conditions": "@dados:telefone",
+      "dialog_node": "node_4_1683595960450"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "A IA Generativa é aquela capaz de gerar novas informações a partir de conjuntos de dados pré-existentes, similar aos dados usados para ensinar a IA, porém podendo ser únicos e originais."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#duvidaInteligênciaArtificial",
+      "dialog_node": "node_4_1686121495589",
+      "previous_sibling": "node_10_1686121371802"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Perfeito, vamos começar, qual o seu nome?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#inicioCadastro",
+      "dialog_node": "node_5_1683595479644",
+      "previous_sibling": "Bem-vindo"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Agricultura de conservação\nEsse modelo visa reduzir a erosão do solo, preservar a umidade e melhorar a fertilidade do solo.\n\nAgricultura vertical\nEssa abordagem envolve o cultivo de plantas em camadas verticais, geralmente em ambientes fechados, como estufas ou prédios.\n\nHidroponia\nNesse método, as plantas são cultivadas em água, sem solo. Os nutrientes necessários são fornecidos diretamente na água, o que permite um uso mais eficiente dos nutrientes e da água."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#exemplosModeloCultivo",
+      "dialog_node": "node_5_1686122357735",
+      "previous_sibling": "node_6_1686122112011"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tchau! Estarei aqui quando você retornar. Até mais e até breve!"
+              },
+              {
+                "text": "Adeus! Agradeço pela conversa e estou à disposição para ajudar novamente quando necessário. Tenha um ótimo dia!"
+              },
+              {
+                "text": "Até breve! Estarei aqui para responder a suas dúvidas quando você retornar. Até mais e até logo!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#despedida",
+      "dialog_node": "node_6_1684132752302",
+      "previous_sibling": "node_8_1683913078288"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Em média, espera-se que as respostas sejam fornecidas dentro de 2 a 3 dias úteis. É importante ressaltar que esse prazo pode dependendo da demanda. Porém, tentaremos responder o mais rápido possível"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#demora",
+      "dialog_node": "node_6_1686115659288",
+      "previous_sibling": "node_5_1686122357735"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Otimizar o crescimento de plantas\nDetecção de doenças e pragas\nMelhoramento genético de plantas\nSistemas de irrigação inteligentes\nPrevenção de desperdício de alimentos"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#duvidaFuncionalidadeIAGenarativa",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_6_1686122112011",
+      "previous_sibling": "node_8_1686121603714"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Digite um nome válido (sem caracteres especiais):"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1683595479644",
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_4_1683595710326"
+      },
+      "conditions": "anything_else",
+      "dialog_node": "node_7_1684112949969",
+      "previous_sibling": "node_4_1683595710326"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Estou sempre aqui para ajudar!"
+              },
+              {
+                "text": "Fico feliz em ter ajudado!"
+              },
+              {
+                "text": "Estou à disposição para ajudar sempre que precisar."
+              },
+              {
+                "text": "Não há de quê, estou aqui para isso!"
+              },
+              {
+                "text": "Eu que agradeço a oportunidade de ajudar."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "random"
+          }
+        ]
+      },
+      "conditions": "#obrigado",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_8_1683913078288",
+      "previous_sibling": "node_3_1684121685870"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "As IA Generativas funcionam utilizando uma abordagem conhecida como rede generativa adversarial GAN. Uma GAN consiste em dois componentes principais: o gerador e o discriminador.\n\nO gerador é responsável por criar novos dados, enquanto o discriminador avalia esses dados. Com o tempo, o gerador ajusta seus parâmetros para criar dados que o discriminador não pode distinguir dos dados reais."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#duvidaFuncionamentoIAGenerativa",
+      "dialog_node": "node_8_1686121603714",
+      "previous_sibling": "node_4_1686121495589"
+    },
+    {
+      "type": "response_condition",
+      "output": {},
+      "parent": "node_4_1683595960450",
+      "disabled": true,
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_7_1684113412698",
+      "previous_sibling": "response_9_1684113411274"
+    },
+    {
+      "type": "response_condition",
+      "output": {},
+      "parent": "node_4_1683595960450",
+      "disabled": true,
+      "conditions": "anything_else",
+      "dialog_node": "response_7_1684113413119",
+      "previous_sibling": "response_7_1684113412698"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Tudo pronto, cadastro concluído!\nNome: $nome\nEmail: $email\nTelefone: $telefone"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1683595960450",
+      "context": {
+        "telefone": "@dados.literal"
+      },
+      "disabled": true,
+      "dialog_node": "response_9_1684113411274"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "nlp": {
+      "model": "latest"
+    },
+    "disambiguation": {
+      "prompt": "Você quis dizer:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "Nenhuma das anteriores",
+      "use_connect_to_support_prompt": "Connect to support",
+      "single_answer_clarification_prompt": "Something else"
+    },
+    "human_agent_assist": {
+      "prompt": "Você quis dizer:"
+    }
+  },
+  "learning_opt_out": false,
+  "language": "pt-br",
+  "description": "",
+  "name": "AgroSolution"
+}
