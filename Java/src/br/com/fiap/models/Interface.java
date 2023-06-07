@@ -13,18 +13,14 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.JScrollPane;
-import javax.swing.JSpinner;
 import javax.swing.JTable;
 import javax.swing.JTextArea;
-import javax.swing.SpinnerNumberModel;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.Dimension;
 import java.awt.Insets;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Map;
-
 import br.com.fiap.utilities.OpenWeather;
 
 public class Interface {
@@ -214,14 +210,34 @@ public class Interface {
         table.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
 
         JScrollPane scrollPane = new JScrollPane(table);
-        JOptionPane.showMessageDialog(null, scrollPane);
+
+        JOptionPane.showOptionDialog(table, scrollPane, "AgroSolution", 0, JOptionPane.QUESTION_MESSAGE, null, new String[] {"Ver Post Selecionado", "Retornar"}, "Ver Post Selecionado");
         
+
         int selectedRow = table.getSelectedRow();
         if (selectedRow == -1) {
             return;
         }
         Posts post = sb.getPosts().get(selectedRow);
-        System.out.println(post.getTitulo());
+        post.setConteudo(post.getConteudo().replace("\\n", "\n"));
+
+        String tags = "";
+        for (String tag : post.getTags()) {
+            tags += tag + ", ";
+        }
+
+        tags = tags.substring(0, tags.length() - 2);
+
+        String info = "Título: " + post.getTitulo() + "\n\nConteúdo: \n" + post.getConteudo() + "\n\nData: " + post.getData()
+                + "\n\nAutor: " + post.getAutor().getNome() + "\n\nTags: " + tags;
+        JTextArea textArea = new JTextArea(info);
+        textArea.setPreferredSize(new Dimension(500, 500));
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        textArea.setEditable(false);
+        JScrollPane scrollPane2 = new JScrollPane(textArea);
+        JOptionPane.showMessageDialog(null, scrollPane2);
+
         
     }
 
@@ -238,7 +254,7 @@ public class Interface {
         JScrollPane scrollPane = new JScrollPane(content);
         scrollPane.setPreferredSize(new Dimension(200, 100)); // Set preferred size for the scroll pane
 
-        JLabel labelTags = new JLabel("Tags do Post:");
+        JLabel labelTags = new JLabel("Tags do Post (Separe com virgula):");
         JTextField tags = new JTextField();
         tags.setPreferredSize(new Dimension(200, 24));
 
@@ -292,11 +308,15 @@ public class Interface {
         }
 
         String titulo = title.getText();
+        titulo = titulo.replace(";", ",");
+        titulo = titulo.replace("\n", "\\n");
         String conteudo = content.getText();
         conteudo = conteudo.replace(";", ",");
+        conteudo = conteudo.replace("\n", "\\n");
         String data = new SimpleDateFormat("dd/MM/yyyy").format(new Date());
         List<String> tagsList = new ArrayList<String>();
-        for (String tag : tags.getText().split(" ")) {
+        for (String tag : tags.getText().split(",")) {
+            tag = tag.trim();
             tagsList.add(tag);
         }
 
@@ -305,8 +325,54 @@ public class Interface {
         sb.addPost(post);
 
         JOptionPane.showMessageDialog(null, "Post criado com sucesso");
+        sb.saveData();
     }
 
     public static void delete_post(Sistema sb, Usuario usuarioLogado) {
+        // only show posts from the logged user
+        List<Posts> posts = new ArrayList<Posts>();
+        for (Posts post : sb.getPosts()) {
+            if (post.getAutor().getEmail().equals(usuarioLogado.getEmail())) {
+                posts.add(post);
+            }
+        }
+        if (posts.size() == 0) {
+            JOptionPane.showMessageDialog(null, "Você não possui posts");
+            return;
+        }
+        
+        String[] columns = { "Título", "Conteúdo", "Data", "Autor", "Tags" };
+        String[][] data = new String[posts.size()][5];
+        int i = 0;
+        for (Posts post : posts) {
+            data[i][0] = post.getTitulo();
+            data[i][1] = post.getConteudo();
+            data[i][2] = post.getData();
+            data[i][3] = post.getAutor().getNome();
+            data[i][4] = post.getTags().toString();
+            i++;
+        }
+
+        JTable table = new JTable(data, columns);
+        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
+        table.setFillsViewportHeight(true);
+        
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+        table.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
+        table.getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
+        table.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
+        
+        JScrollPane scrollPane = new JScrollPane(table);
+        JOptionPane.showMessageDialog(null, scrollPane);
+        
+        int selectedRow = table.getSelectedRow();
+        if (selectedRow == -1) {
+            return;
+        }
+        Posts post = posts.get(selectedRow);
+        sb.getPosts().remove(post);
+        JOptionPane.showMessageDialog(null, "Post removido com sucesso");
+        sb.saveData();
     }
 }
