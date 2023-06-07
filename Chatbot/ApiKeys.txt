@@ -1,1 +1,14 @@
 Telegram: 5528227798:AAEpxSyzpkfihq7S20FbMNl5Aw3YtKVqrAM
+
+TTS API: zCJqmqLey9IxeHHveLn5BAiKX92SWTj2ZbtfE7y2Hehv
+TTS URL: https://api.au-syd.text-to-speech.watson.cloud.ibm.com/instances/5940960f-ba6d-4cdf-9102-48f075fccc73
+
+STT API: HBhh4c_xtRtBu1UNF22D44ZJRG0KeExm1fOxtN1HnTwp
+STT URL: https://api.au-syd.speech-to-text.watson.cloud.ibm.com/instances/cf90849b-085a-4dcb-81e7-37c3840fa70f
+
+Language API: aS4lnaLbcG996nlvY5kQIZVe4m4vGoYCziCGfja42XQM
+Language URL: https://api.au-syd.language-translator.watson.cloud.ibm.com/instances/ae9dbf5a-47af-43c7-a8f1-d52906d36a41
+
+Watson API: rP5wHVt-epULyimZw04vPKt1ajl6FtMSzqou5J92of5_
+Watson URL: https://api.au-syd.assistant.watson.cloud.ibm.com/instances/51e8ae74-72da-41d8-860d-ef068ca0e63a
+Watson ID: ed684d1a-7d0a-48ed-834d-7284344422a0

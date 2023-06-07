@@ -45,8 +45,10 @@ public class App {
                     Interface.delete_post(sb, usuarioLogado);
                     break;
                 case 7:
+                    Interface.faq();
                     break;
                 case 8:
+                    Interface.suggestions();
                     break;
                 case 9:
                     usuarioLogado = Interface.login(sb);

@@ -4,7 +4,6 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Image;
 import java.util.List;
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
@@ -18,9 +17,15 @@ import javax.swing.JTextArea;
 import javax.swing.table.DefaultTableCellRenderer;
 import java.awt.Dimension;
 import java.awt.Insets;
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
+
 import br.com.fiap.utilities.OpenWeather;
 
 public class Interface {
@@ -211,8 +216,8 @@ public class Interface {
 
         JScrollPane scrollPane = new JScrollPane(table);
 
-        JOptionPane.showOptionDialog(table, scrollPane, "AgroSolution", 0, JOptionPane.QUESTION_MESSAGE, null, new String[] {"Ver Post Selecionado", "Retornar"}, "Ver Post Selecionado");
-        
+        JOptionPane.showOptionDialog(table, scrollPane, "AgroSolution", 0, JOptionPane.QUESTION_MESSAGE, null,
+                new String[] { "Ver Post Selecionado", "Retornar" }, "Ver Post Selecionado");
 
         int selectedRow = table.getSelectedRow();
         if (selectedRow == -1) {
@@ -228,7 +233,8 @@ public class Interface {
 
         tags = tags.substring(0, tags.length() - 2);
 
-        String info = "Título: " + post.getTitulo() + "\n\nConteúdo: \n" + post.getConteudo() + "\n\nData: " + post.getData()
+        String info = "Título: " + post.getTitulo() + "\n\nConteúdo: \n" + post.getConteudo() + "\n\nData: "
+                + post.getData()
                 + "\n\nAutor: " + post.getAutor().getNome() + "\n\nTags: " + tags;
         JTextArea textArea = new JTextArea(info);
         textArea.setPreferredSize(new Dimension(500, 500));
@@ -238,7 +244,6 @@ public class Interface {
         JScrollPane scrollPane2 = new JScrollPane(textArea);
         JOptionPane.showMessageDialog(null, scrollPane2);
 
-        
     }
 
     public static void create_post(Sistema sb, Usuario usuarioLogado) {
@@ -340,7 +345,7 @@ public class Interface {
             JOptionPane.showMessageDialog(null, "Você não possui posts");
             return;
         }
-        
+
         String[] columns = { "Título", "Conteúdo", "Data", "Autor", "Tags" };
         String[][] data = new String[posts.size()][5];
         int i = 0;
@@ -356,16 +361,16 @@ public class Interface {
         JTable table = new JTable(data, columns);
         table.setPreferredScrollableViewportSize(new Dimension(500, 70));
         table.setFillsViewportHeight(true);
-        
+
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
         centerRenderer.setHorizontalAlignment(JLabel.CENTER);
         table.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
         table.getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
         table.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
-        
+
         JScrollPane scrollPane = new JScrollPane(table);
         JOptionPane.showMessageDialog(null, scrollPane);
-        
+
         int selectedRow = table.getSelectedRow();
         if (selectedRow == -1) {
             return;
@@ -374,5 +379,153 @@ public class Interface {
         sb.getPosts().remove(post);
         JOptionPane.showMessageDialog(null, "Post removido com sucesso");
         sb.saveData();
+    }
+
+    public static void faq() {
+        // questions = {
+        // 1: {
+        // "q": "Por que o clima não aparece?",
+        // "a": "Siga esses passos:\n1 - Verifique se o nome da cidade está escrito
+        // corretamente\n2 - Verifique se está conectado a internet\n3 - Se o probelma
+        // persistir, talvez a API esteja fora do ar ou tenha atingido o número máximo,
+        // por favor tente novamente mais tarde",
+        // },
+        // 2: {
+        // "q": "Por que a tradução não funciona?",
+        // "a": "Siga esses passos:\n1 - Verifique se o idioma está escrito
+        // corretamente\n2 - Verifique se está conectado a internet\n3 - Se o probelma
+        // persistir, talvez a API esteja fora do ar ou tenha atingido o número máximo,
+        // por favor tente novamente mais tarde",
+        // },
+        // 3: {
+        // "q": "Por que a tradução não é perfeita?",
+        // "a": "A API de tradução não é perfeita, ela apenas traduz o texto, não o
+        // contexto, por isso, algumas traduções podem não fazer sentido",
+        // },
+        // 4: {
+        // "q": "Por que os posts não traduzem?",
+        // "a": "Por a tradução ainda estar em fase de testes, os posts não são
+        // traduzidos, apenas o menu e as mensagens do programa, para que não haja
+        // problemas de tradução de contexto",
+        // },
+
+        // create a hashmap with the questions and answers
+
+        HashMap<Integer, HashMap<String, String>> questions = new HashMap<Integer, HashMap<String, String>>();
+        HashMap<String, String> question1 = new HashMap<String, String>();
+        question1.put("q", "Por que o clima não aparece?");
+        question1.put("a",
+                "Siga esses passos:\n1 - Verifique se o nome da cidade está escrito corretamente\n2 - Verifique se está conectado a internet\n3 - Se o probelma persistir, talvez a API esteja fora do ar ou tenha atingido o número máximo, por favor tente novamente mais tarde");
+        questions.put(1, question1);
+        HashMap<String, String> question2 = new HashMap<String, String>();
+        question2.put("q", "Por que a tradução não funciona?");
+        question2.put("a",
+                "Siga esses passos:\n1 - Verifique se o idioma está escrito corretamente\n2 - Verifique se está conectado a internet\n3 - Se o probelma persistir, talvez a API esteja fora do ar ou tenha atingido o número máximo, por favor tente novamente mais tarde");
+        questions.put(2, question2);
+        HashMap<String, String> question3 = new HashMap<String, String>();
+        question3.put("q", "Por que a tradução não é perfeita?");
+        question3.put("a",
+                "A API de tradução não é perfeita, ela apenas traduz o texto, não o contexto, por isso, algumas traduções podem não fazer sentido");
+        questions.put(3, question3);
+        HashMap<String, String> question4 = new HashMap<String, String>();
+        question4.put("q", "Por que os posts não traduzem?");
+        question4.put("a",
+                "Por a tradução ainda estar em fase de testes, os posts não são traduzidos, apenas o menu e as mensagens do programa, para que não haja problemas de tradução de contexto");
+        questions.put(4, question4);
+
+        String message = "";
+        for (int i = 1; i <= questions.size(); i++) {
+            message += i + " - " + questions.get(i).get("q") + "\n";
+        }
+
+        // create a show option dialog with the questions and options numbers
+
+        List<String> options = new ArrayList<String>();
+        for (int i = 1; i <= questions.size(); i++) {
+            options.add(Integer.toString(i));
+        }
+        options.add("Retornar");
+        int opcao = JOptionPane.showOptionDialog(null, message, "AgroSolution - FAQ", 0, JOptionPane.QUESTION_MESSAGE,
+                null, options.toArray(), "1");
+
+        if (opcao == -1) {
+            return;
+        }
+
+        if (opcao == questions.size()) {
+            return;
+        }
+
+        // show the answer of the selected question
+        for (int i = 1; i <= questions.size(); i++) {
+            if (opcao == i - 1) {
+                JOptionPane.showMessageDialog(null, questions.get(i).get("a"));
+                return;
+            }
+        }
+
+    }
+
+    public static void suggestions() {
+        // suggestion with TextArea and ScrollPane
+        JLabel label = new JLabel("Sugestão:");
+        JTextArea textArea = new JTextArea();
+        textArea.setPreferredSize(new Dimension(500, 100));
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setPreferredSize(new Dimension(500, 300));
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+
+        JPanel panel = new JPanel(new GridBagLayout());
+
+        GridBagConstraints gbc = new GridBagConstraints();
+        gbc.insets = new Insets(2, 2, 2, 2);
+
+        gbc.gridx = 0;
+        gbc.gridy = 0;
+        gbc.anchor = GridBagConstraints.LINE_START;
+        gbc.fill = GridBagConstraints.HORIZONTAL;
+        gbc.weightx = 1.0;
+        panel.add(label, gbc);
+
+        gbc.gridy++;
+        gbc.weightx = 1.0;
+        gbc.weighty = 1.0;
+        gbc.fill = GridBagConstraints.BOTH;
+        panel.add(scrollPane, gbc);
+
+        int result = JOptionPane.showOptionDialog(
+                null,
+                panel,
+                "AgroSolution",
+                JOptionPane.YES_NO_CANCEL_OPTION,
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                new String[] { "Enviar", "Cancelar" },
+                "Enviar");
+
+        if (result == 1) {
+            return;
+        }
+
+        if (textArea.getText().equals("")) {
+            JOptionPane.showMessageDialog(null, "Preencha o campo de sugestão");
+            return;
+        }
+
+        String suggestion = textArea.getText();
+        suggestion = suggestion.replace(";", ",");
+        suggestion = suggestion.replace("\n", "\\n");
+        try (BufferedWriter writer = new BufferedWriter(
+                new OutputStreamWriter(new FileOutputStream("data/suggestions.txt", true), "UTF-8"))) {
+            writer.append(suggestion);
+            writer.newLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        JOptionPane.showMessageDialog(null, "Sugestão enviada com sucesso");
     }
 }
