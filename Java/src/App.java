@@ -1,7 +1,7 @@
 import br.com.fiap.models.*;
 
 public class App {
-    static boolean debugApp = true;
+    static boolean debugApp = false;
 
     public static void main(String[] args) throws Exception {
         Sistema sb = new Sistema();

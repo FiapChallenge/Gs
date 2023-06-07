@@ -1,0 +1,138 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="4AEC896D-9F49-F84B-9D16-BB9B727588A2" name="Fazenda">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:01:48 UTC</createdTime>
+<notes><![CDATA[ Integrantes - RM :
+ Augusto Barcelos Barros - 98078
+ Gabriel Gribl de Carvalho - 96270
+ Gabriel Souza de Queiroz - 98570
+ Gabriela Zanotto Alves Rodrigues - 551629
+
+Planilha/database escolhido:
+ https://docs.google.com/spreadsheets/d/1xWvvyX6eObOTzo4qkqFO_T3tWn-vDXxsoXFREHc3LX8/edit#gid=0]]></notes>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_fazenda" id="6612A07F-7B62-418C-2181-7F0F6B60E829">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:09 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_estado" id="17C58C88-4413-6420-4C10-5A7663C3900D">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:02 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pais" id="BB4DD144-B654-73DD-C94A-17379EA8288E">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:06 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="E8538324-DAA2-1D43-1128-302FF57FC144">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:01:54 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rua" id="FBA4A255-3C34-C7A3-D9FB-2785C5F261DE">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:04:28 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cidade" id="11D0F4A1-AAEB-7D4D-9D24-98221BDFA67A">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:04:32 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cep" id="4CB1A68F-BE29-C3DC-4773-C39098E0644A">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:04:34 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_estado1" id="75C3DB57-2AEB-8200-50BD-3F526B335D75">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:05:41 UTC</createdTime>
+<generatorID>24E7C32E-F564-6741-D325-68742AB71C10</generatorID>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<referedAttribute>890B6B94-EF6A-CC0B-B660-360D37108E3E</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pais1" id="C2AE6ED7-5AEE-CDAD-70AD-460ABCED02E7">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:15:56 UTC</createdTime>
+<generatorID>ED969B8C-D86F-E681-CF49-3849B706A510</generatorID>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<referedAttribute>2184B6C1-E46E-8E61-45AA-9F74E354B414</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0F84F800-85DA-5622-0CF9-E0EE4AE913D7" name="Fazenda PK">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:15:50 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6612A07F-7B62-418C-2181-7F0F6B60E829</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

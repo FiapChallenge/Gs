@@ -5,6 +5,8 @@ Email: gribl88@gmail.com       | Senha: maya
 Email: queiroz@fiap.com.br     | Senha: SouzaS
 Email: thiagoyama@fiap.com.br  | Senha: fiap123
 
+Libs utilizadas:
+json (org.json)
 
 👤| Integrantes - RM :
 Augusto Barcelos Barros - 98078

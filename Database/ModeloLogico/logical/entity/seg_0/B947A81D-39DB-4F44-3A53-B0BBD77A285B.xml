@@ -1,0 +1,99 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B947A81D-39DB-4F44-3A53-B0BBD77A285B" name="Fazenda_produto">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:28 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_fazenda_produto" id="4B08A63B-8C64-D115-E0BF-A64DDBFC626E">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:37 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="quantidade" id="52CEA1C6-DEAA-EA9F-DF2B-873D3017795B">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:43 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lote" id="E6088CA0-7215-311E-08C7-3963386F3B99">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:47 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="condicoes" id="4E6F92DC-3185-B2AD-E9EE-E333B03228B6">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:49 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_produto" id="7B759809-1380-BD05-DD7E-7B03B36ED7E6">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:17:34 UTC</createdTime>
+<generatorID>5CC6DE07-C579-48CE-AF9A-BE24AA9CCC70</generatorID>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<referedAttribute>B5307380-2BD1-B0F8-39BB-69625D0B13F1</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_fazenda" id="8A622107-4AC0-4927-4A27-117BEF4471C5">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:17:44 UTC</createdTime>
+<generatorID>CC32F784-DC64-A0A9-868A-A590F52C2FD7</generatorID>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<referedAttribute>6612A07F-7B62-418C-2181-7F0F6B60E829</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A374AE93-2A6F-49AF-C874-3DEFBAB59931" name="Fazenda_produto PK">
+<createdBy>augus</createdBy>
+<createdTime>2023-06-07 22:02:42 UTC</createdTime>
+<ownerDesignName>ModeloLogico</ownerDesignName>
+<engineerTo>
+<item key="6E7D3308-5452-3F06-C067-AB069C43BE84" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4B08A63B-8C64-D115-E0BF-A64DDBFC626E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
