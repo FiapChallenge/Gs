@@ -171,7 +171,7 @@ public class Interface {
         String info = "";
         int opcao = JOptionPane.showOptionDialog(null, (info + menu), "AgroSolution - " + usuario.getNome(), 0,
                 JOptionPane.QUESTION_MESSAGE, usuario.getFoto(),
-                new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" }, "1");
+                new String[] { "0", "1", "2", "3", "4", "5", "6", "7" }, "1");
         return opcao;
     }
 

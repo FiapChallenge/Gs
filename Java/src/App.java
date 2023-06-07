@@ -17,7 +17,7 @@ public class App {
             System.out.println(usuarioLogado);
         }
 
-        String menu = "0 - Sair\n1 - Configurações\n2 - Clima\n3 - Diário Agrícola\n4 - Ver Posts\n5 - Criar um Post\n6 - Remover um Post\n7 - FAQ\n8 - Sugestões de Melhoria\n9 - Trocar de Usuário\n\nEscolha uma opção:";
+        String menu = "0 - Sair\n1 - Clima\n2 - Ver Posts\n3 - Criar um Post\n4 - Remover um Post\n5 - FAQ\n6 - Sugestões de Melhoria\n7 - Trocar de Usuário\n\nEscolha uma opção:";
         while (true) {
             int opcao = Interface.menu(usuarioLogado, menu);
             switch (opcao) {
@@ -29,28 +29,24 @@ public class App {
                     System.exit(0);
                     break;
                 case 1:
-                    break;
-                case 2:
                     Interface.weather();
                     break;
-                case 3:
-                    break;
-                case 4:
+                case 2:
                     Interface.show_posts(sb);
                     break;
-                case 5:
+                case 3:
                     Interface.create_post(sb, usuarioLogado);
                     break;
-                case 6:
+                case 4:
                     Interface.delete_post(sb, usuarioLogado);
                     break;
-                case 7:
+                case 5:
                     Interface.faq();
                     break;
-                case 8:
+                case 6:
                     Interface.suggestions();
                     break;
-                case 9:
+                case 7:
                     usuarioLogado = Interface.login(sb);
                     System.out.println(usuarioLogado);
                     break;
