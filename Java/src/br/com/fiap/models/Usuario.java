@@ -66,7 +66,7 @@ public class Usuario {
         return foto;
     }
 
-    // Sobreescrita de método
+    // Sobreescrita de método toString para exibir informações do usuário
     @Override
     public String toString() {
         return "Usuario [email=" + email + ", nome=" + nome + "]";

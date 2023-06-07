@@ -18,6 +18,8 @@ import org.json.JSONObject;
 
 public class OpenWeather {
 
+
+    // Método para obter informações do clima de uma cidade através da API do OpenWeather
     public static List<String> getInfo(String city) {
         String apiKey = "3d6dbc169a239f24eada6faa74fc9dc4";
         String encodedCity = city;

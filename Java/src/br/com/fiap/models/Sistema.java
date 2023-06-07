@@ -98,10 +98,12 @@ public class Sistema {
         usuarios.add(usuario);
     }
 
+    // Sobrecarga de método
     public void addUsuario(Usuario usuario) {
         usuarios.add(usuario);
     }
 
+    // Método para buscar um usuário pelo email
     public Usuario buscarUsuario(String email) {
         for (Usuario usuario : usuarios) {
             if (usuario.getEmail().equals(email)) {

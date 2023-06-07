@@ -1,5 +1,16 @@
+Contas que podem ser utilizadas sem precisar cadastrar:
+Email: augustobb@live.com      | Senha: pandorinhha
+Email: gabs.gnt@hotmail.com    | Senha: gui
+Email: gribl88@gmail.com       | Senha: maya
+Email: queiroz@fiap.com.br     | Senha: SouzaS
+Email: thiagoyama@fiap.com.br  | Senha: fiap123
+
+
 👤| Integrantes - RM :
 Augusto Barcelos Barros - 98078
 Gabriel Gribl de Carvalho - 96270
 Gabriel Souza de Queiroz - 98570
 Gabriela Zanotto Alves Rodrigues - 551629
+
+🖥️| Repositório GitHub:
+https://github.com/FiapChallenge/Gs/tree/main/Java

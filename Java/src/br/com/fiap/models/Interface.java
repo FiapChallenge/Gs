@@ -29,6 +29,8 @@ import java.util.HashMap;
 import br.com.fiap.utilities.OpenWeather;
 
 public class Interface {
+
+    // Método para exibir a tela de login
     public static Usuario login(Sistema sb) {
         ImageIcon icon = new ImageIcon("GFX/logo/logo.png");
         while (true) {
@@ -83,6 +85,7 @@ public class Interface {
         }
     }
 
+    // Método para exibir a tela de cadastro
     public static void cadastrar(Sistema sb) {
         while (true) {
 
@@ -167,6 +170,7 @@ public class Interface {
         }
     }
 
+    // Método para exibir o menu principal
     public static int menu(Usuario usuario, String menu) {
         String info = "";
         int opcao = JOptionPane.showOptionDialog(null, (info + menu), "AgroSolution - " + usuario.getNome(), 0,
@@ -191,6 +195,7 @@ public class Interface {
         JOptionPane.showMessageDialog(null, infoString);
     }
 
+    // Método para exibir os posts e permitir a visualização deles
     public static void show_posts(Sistema sb) {
         String[] columns = { "Título", "Conteúdo", "Data", "Autor", "Tags" };
         String[][] data = new String[sb.getPosts().size()][5];
@@ -250,6 +255,7 @@ public class Interface {
 
     }
 
+    // Método para criar posts
     public static void create_post(Sistema sb, Usuario usuarioLogado) {
         JLabel labelTitle = new JLabel("Título do Post:");
         JTextField title = new JTextField();
@@ -337,8 +343,8 @@ public class Interface {
         sb.saveData();
     }
 
+    // Método para exibir os posts do usuário logado e permitir a remoção deles
     public static void delete_post(Sistema sb, Usuario usuarioLogado) {
-        // only show posts from the logged user
         List<Posts> posts = new ArrayList<Posts>();
         for (Posts post : sb.getPosts()) {
             if (post.getAutor().getEmail().equals(usuarioLogado.getEmail())) {
@@ -349,7 +355,6 @@ public class Interface {
             JOptionPane.showMessageDialog(null, "Você não possui posts");
             return;
         }
-        
 
         String[] columns = { "Título", "Conteúdo", "Data", "Autor", "Tags" };
         String[][] data = new String[posts.size()][5];
@@ -396,36 +401,8 @@ public class Interface {
         sb.saveData();
     }
 
+    // Método para exibir o FAQ
     public static void faq() {
-        // questions = {
-        // 1: {
-        // "q": "Por que o clima não aparece?",
-        // "a": "Siga esses passos:\n1 - Verifique se o nome da cidade está escrito
-        // corretamente\n2 - Verifique se está conectado a internet\n3 - Se o probelma
-        // persistir, talvez a API esteja fora do ar ou tenha atingido o número máximo,
-        // por favor tente novamente mais tarde",
-        // },
-        // 2: {
-        // "q": "Por que a tradução não funciona?",
-        // "a": "Siga esses passos:\n1 - Verifique se o idioma está escrito
-        // corretamente\n2 - Verifique se está conectado a internet\n3 - Se o probelma
-        // persistir, talvez a API esteja fora do ar ou tenha atingido o número máximo,
-        // por favor tente novamente mais tarde",
-        // },
-        // 3: {
-        // "q": "Por que a tradução não é perfeita?",
-        // "a": "A API de tradução não é perfeita, ela apenas traduz o texto, não o
-        // contexto, por isso, algumas traduções podem não fazer sentido",
-        // },
-        // 4: {
-        // "q": "Por que os posts não traduzem?",
-        // "a": "Por a tradução ainda estar em fase de testes, os posts não são
-        // traduzidos, apenas o menu e as mensagens do programa, para que não haja
-        // problemas de tradução de contexto",
-        // },
-
-        // create a hashmap with the questions and answers
-
         HashMap<Integer, HashMap<String, String>> questions = new HashMap<Integer, HashMap<String, String>>();
         HashMap<String, String> question1 = new HashMap<String, String>();
         question1.put("q", "Por que o clima não aparece?");
@@ -453,8 +430,6 @@ public class Interface {
             message += i + " - " + questions.get(i).get("q") + "\n";
         }
 
-        // create a show option dialog with the questions and options numbers
-
         List<String> options = new ArrayList<String>();
         for (int i = 1; i <= questions.size(); i++) {
             options.add(Integer.toString(i));
@@ -471,7 +446,6 @@ public class Interface {
             return;
         }
 
-        // show the answer of the selected question
         for (int i = 1; i <= questions.size(); i++) {
             if (opcao == i - 1) {
                 JOptionPane.showMessageDialog(null, questions.get(i).get("a"));
@@ -481,6 +455,7 @@ public class Interface {
 
     }
 
+    // Método para enviar sugestões
     public static void suggestions() {
         // suggestion with TextArea and ScrollPane
         JLabel label = new JLabel("Sugestão:");
