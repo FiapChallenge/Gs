@@ -200,12 +200,12 @@ public class Interface {
             data[i][1] = post.getConteudo();
             data[i][2] = post.getData();
             data[i][3] = post.getAutor().getNome();
-            data[i][4] = post.getTags().toString();
+            data[i][4] = post.getTags().toString().replace("[", "").replace("]", "");
             i++;
         }
 
         JTable table = new JTable(data, columns);
-        table.setPreferredScrollableViewportSize(new Dimension(500, 70));
+        table.setPreferredScrollableViewportSize(new Dimension(600, 70));
         table.setFillsViewportHeight(true);
 
         DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
@@ -213,6 +213,10 @@ public class Interface {
         table.getColumnModel().getColumn(0).setCellRenderer(centerRenderer);
         table.getColumnModel().getColumn(1).setCellRenderer(centerRenderer);
         table.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
+        table.getColumnModel().getColumn(3).setCellRenderer(centerRenderer);
+        table.getColumnModel().getColumn(4).setCellRenderer(centerRenderer);
+
+        table.getColumnModel().getColumn(0).setPreferredWidth(120);
 
         JScrollPane scrollPane = new JScrollPane(table);
 
@@ -345,6 +349,7 @@ public class Interface {
             JOptionPane.showMessageDialog(null, "Você não possui posts");
             return;
         }
+        
 
         String[] columns = { "Título", "Conteúdo", "Data", "Autor", "Tags" };
         String[][] data = new String[posts.size()][5];
@@ -354,7 +359,7 @@ public class Interface {
             data[i][1] = post.getConteudo();
             data[i][2] = post.getData();
             data[i][3] = post.getAutor().getNome();
-            data[i][4] = post.getTags().toString();
+            data[i][4] = post.getTags().toString().replace("[", "").replace("]", "");
             i++;
         }
 
@@ -369,12 +374,22 @@ public class Interface {
         table.getColumnModel().getColumn(2).setCellRenderer(centerRenderer);
 
         JScrollPane scrollPane = new JScrollPane(table);
-        JOptionPane.showMessageDialog(null, scrollPane);
+        int opcao = JOptionPane.showOptionDialog(table, scrollPane, "AgroSolution", 0, JOptionPane.QUESTION_MESSAGE,
+                null, new String[] { "Remover Post Selecionado", "Retornar" }, "Remover Post Selecionado");
+
+        if (opcao == 1) {
+            return;
+        }
+
+        if (opcao == -1) {
+            return;
+        }
 
         int selectedRow = table.getSelectedRow();
         if (selectedRow == -1) {
             return;
         }
+
         Posts post = posts.get(selectedRow);
         sb.getPosts().remove(post);
         JOptionPane.showMessageDialog(null, "Post removido com sucesso");
